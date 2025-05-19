@@ -27,13 +27,15 @@ func MainHandler(ctx *fasthttp.RequestCtx) {
 
 	switch pth := string(ctx.Path()); pth {
 
-	case "/test":
-		test.ExecuteTestHandler(ctx)
+	/*
+		case "/test":
+			test.ExecuteTestHandler(ctx)
 
-	case apiPathHeader + "/auth/login":
-		auth.ClassicAuthHandler(ctx)
-	case apiPathHeader + "/auth/register":
-		auth.UserRegisterHandler(ctx)
+		case apiPathHeader + "/auth/login":
+			auth.ClassicAuthHandler(ctx)
+		case apiPathHeader + "/auth/register":
+			auth.UserRegisterHandler(ctx)
+	*/
 
 	default:
 		log.Printf("Endpoint (%s) not found.", pth)
