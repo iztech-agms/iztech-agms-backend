@@ -1,6 +1,8 @@
 package server
 
 import (
+	"graduation-system/endpoints/handlers/auth"
+	handlers "graduation-system/endpoints/handlers/notification"
 	"graduation-system/endpoints/handlers/test"
 	"log"
 
@@ -13,6 +15,11 @@ func RunDBHttpServer(port string) {
 
 	// Endpoints handlers
 	router.POST("/test", test.ExecuteTestHandler)
+	router.POST("/auth/login", auth.AuthLoginHandler)
+
+	router.POST("/notifications/get/user-id/:user-id", handlers.GetNotificationsByUserIDHandler)
+	router.POST("/notifications/update", handlers.UpdateNotificationHandler)
+	router.POST("/notifications/delete/id/:id", handlers.DeleteNotificationHandler)
 
 	srv := &fasthttp.Server{
 		Handler: router.Handler,

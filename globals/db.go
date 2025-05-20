@@ -1,9 +1,9 @@
 package globals
 
 import (
-	"database/sql"
+	"gorm.io/gorm"
 )
 
 var (
-	GMSDB *sql.DB
+	GMSDB *gorm.DB
 )

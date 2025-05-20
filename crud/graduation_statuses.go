@@ -1,0 +1,66 @@
+package crud
+
+import (
+	"graduation-system/globals"
+	"log"
+)
+
+type GraduationStatus struct {
+	ID                 int  `gorm:"column:id;type:int(11);primaryKey" json:"id"`
+	StudentID          int  `gorm:"column:student_id;type:int(11);not null" json:"student_id"` //TODO maybe add student transcript info
+	IsAdvisorConfirmed bool `gorm:"not null" json:"is_advisor_confirmed"`
+	IsDepSecConfirmed  bool `gorm:"not null" json:"is_dep_sec_confirmed"`
+	IsFacultyConfirmed bool `gorm:"not null" json:"is_faculty_confirmed"`
+	IsStdAffConfirmed  bool `gorm:"not null" json:"is_std_aff_confirmed"`
+
+	Student Student `gorm:"foreignKey:StudentID" json:"student"`
+}
+
+func (GraduationStatus) TableName() string {
+	return "graduation_statuses"
+}
+
+// Get all graduation_statuses
+func GetGraduationStatuses() []GraduationStatus {
+	var graduation_statuses []GraduationStatus
+	if err := globals.GMSDB.Find(&graduation_statuses).Error; err != nil {
+		log.Printf("(Error) : error getting graduation_statuses : %v", err)
+	}
+	return graduation_statuses
+}
+
+// Get graduation_status by ID
+func GetGraduationStatusByID(id int) GraduationStatus {
+	var graduation_status GraduationStatus
+	if err := globals.GMSDB.Where("id = ?", id).First(&graduation_status).Error; err != nil {
+		log.Printf("(Error) : error getting graduation_status : %v", err)
+	}
+	return graduation_status
+}
+
+// Create graduation_status
+func CreateGraduationStatus(graduation_status *GraduationStatus) error {
+	if err := globals.GMSDB.Create(graduation_status).Error; err != nil {
+		log.Printf("(Error) : error creating graduation_status : %v", err)
+		return err
+	}
+	return nil
+}
+
+// Update graduation_status
+func UpdateGraduationStatus(graduation_status GraduationStatus) error {
+	if err := globals.GMSDB.Save(&graduation_status).Error; err != nil {
+		log.Printf("(Error) : error updating graduation_status : %v", err)
+		return err
+	}
+	return nil
+}
+
+// Delete graduation_status
+func DeleteGraduationStatusByID(id int) error {
+	if err := globals.GMSDB.Delete(&GraduationStatus{}, id).Error; err != nil {
+		log.Printf("(Error) : error deleting graduation_status : %v", err)
+		return err
+	}
+	return nil
+}

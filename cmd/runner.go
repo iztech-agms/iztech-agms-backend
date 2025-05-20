@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"graduation-system/cmd/server"
 	"graduation-system/database/constructor"
+	dbinitializer "graduation-system/database/dbInitializer"
 	"log"
 	"os"
 
@@ -40,6 +41,12 @@ func Run() {
 
 	// Initialize log file
 	initLogFile("../logs/server.log")
+
+	// Create tables
+	dbinitializer.CreateTables()
+
+	// Initialize default profiles
+	dbinitializer.InitializeDefaultProfiles()
 
 	server.RunDBHttpServer(serverPort)
 }
