@@ -8,20 +8,34 @@ import (
 	"gorm.io/gorm"
 )
 
-func InitDB(dsn string) error {
-	var err error
-	globals.GMSDB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
+type DBConnectionConfig struct {
+	Username string
+	Password string
+	Host     string
+	Port     string
+	DbName   string
+}
+
+func InitDB(dbConf DBConnectionConfig) error {
+	// Create database if not exists
+	if err := CreateDatabaseGMSIfNotExists(dbConf); err != nil {
+		return err
+	}
+
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
+		dbConf.Username,
+		dbConf.Password,
+		dbConf.Host,
+		dbConf.Port,
+		dbConf.DbName)
+
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		return fmt.Errorf("error while connecting to the database: %v", err)
 	}
 
-	// Create database if not exists
-	if err := globals.GMSDB.Exec("CREATE DATABASE IF NOT EXISTS gms").Error; err != nil {
-		return fmt.Errorf("error while creating database: %v", err)
-	}
-
 	// Connection pool settings
-	sqlDB, err := globals.GMSDB.DB()
+	sqlDB, err := db.DB()
 	if err != nil {
 		return fmt.Errorf("error while getting database connection pool: %v", err)
 	}
@@ -32,5 +46,35 @@ func InitDB(dsn string) error {
 	sqlDB.SetConnMaxLifetime(3600) // Maximum lifetime of connections (seconds)
 
 	fmt.Println("Successfully connected to the database!")
+	globals.GMSDB = db
+	return nil
+}
+
+func CreateDatabaseGMSIfNotExists(dbConf DBConnectionConfig) error {
+	// open connection
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/",
+		dbConf.Username,
+		dbConf.Password,
+		dbConf.Host,
+		dbConf.Port)
+
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	if err != nil {
+		return fmt.Errorf("error while connecting to the database: %v", err)
+	}
+
+	sqlDB, err := db.DB()
+	if err != nil {
+		return fmt.Errorf("error while getting database connection pool: %v", err)
+	}
+
+	defer sqlDB.Close()
+
+	err = db.Exec("CREATE DATABASE IF NOT EXISTS " + dbConf.DbName + ";").Error
+	if err != nil {
+		return fmt.Errorf("error while creating database: %v", err)
+	}
+
+	fmt.Println("Successfully created/exists database " + dbConf.DbName)
 	return nil
 }

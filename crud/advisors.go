@@ -8,9 +8,6 @@ import (
 type Advisor struct {
 	ID             int    `gorm:"column:id;type:int(11);primaryKey" json:"id"`
 	DepartmentName string `gorm:"column:department_name;type:varchar(255);not null" json:"department_name"`
-
-	User       User       `gorm:"foreignKey:ID;constraint:OnDelete:CASCADE;" json:"user"`
-	Department Department `gorm:"foreignKey:DepartmentName;references:Name" json:"department"`
 }
 
 func (Advisor) TableName() string {
@@ -36,7 +33,6 @@ func GetAdvisorByID(id int) Advisor {
 }
 
 // Get advisor by name (not tested yet)
-
 func GetAdvisorByUsername(username string) Advisor {
 	var advisor Advisor
 	err := globals.GMSDB.Table("advisors").

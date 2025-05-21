@@ -8,9 +8,6 @@ import (
 type Student struct {
 	ID        int `gorm:"column:id;type:int(11);primaryKey" json:"id"`
 	AdvisorID int `gorm:"column:advisor_id;type:int(11);not null" json:"advisor_id"`
-
-	Advisor Advisor `gorm:"foreignKey:AdvisorID" json:"advisor"`
-	User    User    `gorm:"foreignKey:ID;constraint:OnDelete:CASCADE;" json:"user"`
 }
 
 func (Student) TableName() string {

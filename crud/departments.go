@@ -8,8 +8,6 @@ import (
 type Department struct {
 	Name        string `gorm:"column:name;type:varchar(255);primaryKey" json:"name"`
 	FacultyName string `gorm:"column:faculty_name;type:varchar(255);not null" json:"faculty_name"`
-
-	//Faculty Faculty `gorm:"foreignKey:FacultyName;references:Name" json:"faculty"`
 }
 
 func (Department) TableName() string {

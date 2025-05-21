@@ -103,35 +103,100 @@ func InitializeDefaultProfiles() {
 		})
 	}
 
-	var user crud.User
-	if len(crud.GetAdvisors()) == 0 {
-		// Default advisors
+	if len(crud.GetStudentAffairss()) == 0 {
+		// Default Student affairs
+		crud.CreateUser(&crud.User{
+			ID:        5,
+			Username:  "stdaff1",
+			Password:  "1",
+			Role:      "student_affairs",
+			FirstName: "William",
+			LastName:  "Johnson",
+		})
+		crud.CreateStudentAffairs(&crud.StudentAffairs{
+			ID: 5,
+		})
+	}
 
-		user = crud.User{
+	if len(crud.GetFacultySecretaries()) == 0 {
+		// Default faculty secretaries
+		crud.CreateUser(&crud.User{
+			ID:        4,
+			Username:  "facsec1",
+			Password:  "1",
+			Role:      "faculty_secretary",
+			FirstName: "Robert",
+			LastName:  "Johnson",
+		})
+		crud.CreateFacultySecretary(&crud.FacultySecretary{
+			ID:          4,
+			FacultyName: "Engineering",
+		})
+	}
+
+	if len(crud.GetDepartmentSecretaries()) == 0 {
+		// Default department secretaries
+		crud.CreateUser(&crud.User{
+			ID:        3,
+			Username:  "depsec1",
+			Password:  "1",
+			Role:      "department_secretary",
+			FirstName: "Bob",
+			LastName:  "Johnson",
+		})
+		crud.CreateDepartmentSecretary(&crud.DepartmentSecretary{
+			ID:             3,
+			DepartmentName: "Computer Engineering",
+		})
+	}
+
+	if len(crud.GetAdvisors()) == 0 {
+
+		// Default advisors
+		crud.CreateUser(&crud.User{
+			ID:        1,
 			Username:  "advisor1",
 			Password:  "4321",
 			Role:      "advisor",
 			FirstName: "John",
 			LastName:  "Johnson",
-		}
-
-		crud.CreateUser(&user)
+		})
 		crud.CreateAdvisor(&crud.Advisor{
+			ID:             1,
 			DepartmentName: "Computer Engineering",
-			User: user,
 		})
 
-		user = crud.User{
+		crud.CreateUser(&crud.User{
+			ID:        2,
 			Username:  "290201064",
 			Password:  "samet123",
 			Role:      "student",
 			FirstName: "Samet",
 			LastName:  "Hodaman",
-		}
-		crud.CreateUser(&user)
+		})
 		crud.CreateStudent(&crud.Student{
-			AdvisorID: crud.GetAdvisorByUsername("advisor1").ID,
-			User: user,
+			ID:        2,
+			AdvisorID: 1,
+		})
+
+		crud.CreateNotification(&crud.Notification{
+			UserID:             2,
+			IsNotificationRead: false,
+			Title:              "Welcome to the system",
+			Message:            "Enjoy the system!	",
+		})
+	}
+	if len(crud.GetGraduationStatuses()) == 0 {
+		crud.CreateGraduationStatus(&crud.GraduationStatus{
+			ID:                 1,
+			Year:               2025,
+			StudentID:          2,
+			StudentSemester:    8,
+			StudentGPA:         2.5,
+			IsAdvisorConfirmed: false,
+			IsDepSecConfirmed:  false,
+			IsFacultyConfirmed: false,
+			IsStdAffConfirmed:  false,
 		})
 	}
 

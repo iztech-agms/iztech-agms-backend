@@ -7,13 +7,14 @@ import (
 
 type GraduationStatus struct {
 	ID                 int  `gorm:"column:id;type:int(11);primaryKey" json:"id"`
-	StudentID          int  `gorm:"column:student_id;type:int(11);not null" json:"student_id"` //TODO maybe add student transcript info
+	Year               int  `gorm:"column:id;type:int(13);not null" json:"year"`
+	StudentID          int  `gorm:"column:student_id;type:int(11);not null" json:"student_id"`
+	StudentSemester    int  `gorm:"column:student_semester;type:int(5);not null" json:"student_semester"`
+	StudentGPA         float64  `gorm:"column:student_gpa;type:double;not null" json:"student_gpa"` //TODO change to float
 	IsAdvisorConfirmed bool `gorm:"not null" json:"is_advisor_confirmed"`
 	IsDepSecConfirmed  bool `gorm:"not null" json:"is_dep_sec_confirmed"`
 	IsFacultyConfirmed bool `gorm:"not null" json:"is_faculty_confirmed"`
 	IsStdAffConfirmed  bool `gorm:"not null" json:"is_std_aff_confirmed"`
-
-	Student Student `gorm:"foreignKey:StudentID" json:"student"`
 }
 
 func (GraduationStatus) TableName() string {
@@ -29,6 +30,15 @@ func GetGraduationStatuses() []GraduationStatus {
 	return graduation_statuses
 }
 
+// Get grad statuses by year
+func GetGraduationStatusesByYear(year int) []GraduationStatus {
+	var graduation_statuses []GraduationStatus
+	if err := globals.GMSDB.Find(&graduation_statuses).Where("year = ?", year).Error; err != nil {
+		log.Printf("(Error) : error getting graduation_statuses : %v", err)
+	}
+	return graduation_statuses
+}
+
 // Get graduation_status by ID
 func GetGraduationStatusByID(id int) GraduationStatus {
 	var graduation_status GraduationStatus
@@ -37,6 +47,16 @@ func GetGraduationStatusByID(id int) GraduationStatus {
 	}
 	return graduation_status
 }
+
+// Get gradStatus by matching student ID
+func GetGraduationStatusByStudentID(studentID int) GraduationStatus {
+	var res GraduationStatus
+	if err := globals.GMSDB.Where("student_id = ?", studentID).First(&res).Error; err != nil {
+		log.Printf("(Error) : error getting graduation_status : %v", err)
+	}
+	return res
+}
+
 
 // Create graduation_status
 func CreateGraduationStatus(graduation_status *GraduationStatus) error {

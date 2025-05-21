@@ -16,3 +16,9 @@ type NotificationsResp struct {
 	Status        ResponseMessage     `json:"status"`
 	Notifications []crud.Notification `json:"notifications"`
 }
+
+type GraduationStatusResp struct {
+	Status           ResponseMessage         `json:"status"`
+	GraduationStatus []crud.GraduationStatus `json:"graduation_status"`
+}
+

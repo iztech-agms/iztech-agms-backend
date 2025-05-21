@@ -12,8 +12,7 @@ type Notification struct {
 	CreatedAt          time.Time `gorm:"column:created_at;type:timestamp;not null;default:CURRENT_TIMESTAMP" json:"created_at"`
 	IsNotificationRead bool      `gorm:"column:is_notification_read;type:tinyint(1);not null" json:"is_notification_read"`
 	Message            string    `gorm:"column:message;type:text;not null" json:"message"`
-
-	User User `gorm:"foreignKey:UserID;constraint:OnDelete:CASCADE;" json:"user"`
+	Title              string    `gorm:"column:title;type:varchar(255);not null" json:"title"`
 }
 
 func (Notification) TableName() string {
@@ -41,7 +40,7 @@ func GetNotificationByID(id int) Notification {
 // Get notifications by reciever ID
 func GetNotificationsByRecieverID(recieverID int) []Notification {
 	notifications := []Notification{}
-	if err := globals.GMSDB.Where("recv_id = ?", recieverID).Find(&notifications).Error; err != nil {
+	if err := globals.GMSDB.Where("user_id = ?", recieverID).Find(&notifications).Error; err != nil {
 		log.Printf("(Error) : error getting notifications : %v", err)
 	}
 	return notifications

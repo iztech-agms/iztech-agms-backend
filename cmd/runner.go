@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"graduation-system/cmd/server"
 	"graduation-system/database/constructor"
 	dbinitializer "graduation-system/database/dbInitializer"
@@ -23,18 +22,16 @@ func Run() {
 	serverPort := os.Getenv("SERVER_PORT")
 
 	// Read database environment variables
-	user := os.Getenv("DB_USER")
-	pass := os.Getenv("DB_PASS")
-	host := os.Getenv("DB_HOST")
-	port := os.Getenv("DB_PORT")
-	name := os.Getenv("DB_NAME")
-
-	// DSN (Data Source Name)
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		user, pass, host, port, name)
+	dbConfig := constructor.DBConnectionConfig{
+		Username: os.Getenv("DB_USER"),
+		Password: os.Getenv("DB_PASS"),
+		Host:     os.Getenv("DB_HOST"),
+		Port:     os.Getenv("DB_PORT"),
+		DbName:   os.Getenv("DB_NAME"),
+	}
 
 	// Initialize database
-	err = constructor.InitDB(dsn)
+	err = constructor.InitDB(dbConfig)
 	if err != nil {
 		log.Fatal("Error initializing database: ", err)
 	}

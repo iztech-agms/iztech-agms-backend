@@ -8,9 +8,6 @@ import (
 type FacultySecretary struct {
 	ID          int    `gorm:"column:id;type:int(11);primaryKey" json:"id"`
 	FacultyName string `gorm:"column:faculty_name;type:varchar(255);not null" json:"faculty_name"`
-
-	User    User    `gorm:"foreignKey:ID;constraint:OnDelete:CASCADE;" json:"user"`
-	Faculty Faculty `gorm:"foreignKey:FacultyName;references:Name" json:"faculty"`
 }
 
 func (FacultySecretary) TableName() string {
