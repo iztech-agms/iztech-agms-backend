@@ -87,4 +87,3 @@ func GetGradStatusByGradYear(ctx *fasthttp.RequestCtx) {
 		}
 	}
 }
-

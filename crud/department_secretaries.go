@@ -8,6 +8,7 @@ import (
 type DepartmentSecretary struct {
 	ID             int    `gorm:"column:id;type:int(11);primaryKey" json:"id"`
 	DepartmentName string `gorm:"column:department_name;type:varchar(255);not null" json:"department_name"`
+	OfficeLocation string `gorm:"column:office_location;type:varchar(255);not null" json:"office_location"`
 }
 
 func (DepartmentSecretary) TableName() string {
@@ -40,6 +41,7 @@ func CreateDepartmentSecretary(department_secretary *DepartmentSecretary) error 
 	}
 	return nil
 }
+
 
 // Update department_secretary
 func UpdateDepartmentSecretary(department_secretary DepartmentSecretary) error {

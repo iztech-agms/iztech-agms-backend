@@ -9,9 +9,10 @@ type User struct {
 	ID        int    `gorm:"column:id;type:int(11);primaryKey;autoIncrement" json:"id"`
 	FirstName string `gorm:"column:first_name;type:varchar(255);not null" json:"first_name"`
 	LastName  string `gorm:"column:last_name;type:varchar(255);not null" json:"last_name"`
+	Telephone string `gorm:"column:telephone;type:varchar(255);not null" json:"telephone"`
 	Username  string `gorm:"column:username;type:varchar(255);not null;unique" json:"username"`
 	Password  string `gorm:"column:password;type:varchar(255);not null" json:"password"`
-	Role      string `gorm:"column:role;type:varchar(255);not null" json:"role"` //Not sure what to do with this -Bahadır
+	Role      string `gorm:"column:role;type:varchar(255);not null" json:"role"`
 }
 
 func (User) TableName() string {
@@ -30,7 +31,7 @@ func GetUsers() []User {
 // Get user by ID
 func GetUserByID(id int) User {
 	var user User
-	if err := globals.GMSDB.Where("id = ?", id).First(&user).Error; err != nil {
+	if err := globals.GMSDB.First(&user, "id = ?", id).Error; err != nil {
 		log.Printf("(Error) : error getting user : %v", err)
 	}
 	return user
@@ -39,7 +40,7 @@ func GetUserByID(id int) User {
 // Get user by Username
 func GetUserByUsername(username string) User {
 	var user User
-	if err := globals.GMSDB.Where("username = ?", username).First(&user).Error; err != nil {
+	if err := globals.GMSDB.First(&user, "username = ?", username).Error; err != nil {
 		log.Printf("(Error) : error getting user : %v", err)
 	}
 	return user

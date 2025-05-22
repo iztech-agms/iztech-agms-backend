@@ -4,7 +4,9 @@ import (
 	"graduation-system/endpoints/handlers/auth"
 	gradStatus "graduation-system/endpoints/handlers/graduationStatus"
 	handlers "graduation-system/endpoints/handlers/notification"
+	"graduation-system/endpoints/handlers/student"
 	"graduation-system/endpoints/handlers/test"
+	"graduation-system/endpoints/middleware"
 	"log"
 
 	"github.com/buaazp/fasthttprouter"
@@ -18,14 +20,15 @@ func RunDBHttpServer(port string) {
 	router.POST("/test", test.ExecuteTestHandler)
 	router.POST("/auth/login", auth.AuthLoginHandler)
 
-	router.POST("/notifications/get/user-id/:user-id", handlers.GetNotificationsByUserIDHandler)
-	router.POST("/notifications/update", handlers.UpdateNotificationHandler)
-	router.POST("/notifications/delete/id/:id", handlers.DeleteNotificationHandler)
+	router.POST("/notifications/get/user-id/:user-id", wrapWithJWTMiddleware(handlers.GetNotificationsByUserIDHandler))
+	router.POST("/notifications/update", wrapWithJWTMiddleware(handlers.UpdateNotificationHandler))
+	router.POST("/notifications/delete/id/:id", wrapWithJWTMiddleware(handlers.DeleteNotificationHandler))
 
-	router.POST("/graduation_status/std/:id", gradStatus.GetGradStatusByUserIDHandler)
-	router.POST("/graduation_status/list/:year", gradStatus.GetGradStatusByGradYear)
-	router.POST("/graduation_status/update", gradStatus.UpdateGradStatus)
-	
+	router.POST("/graduation-status/std/:id", wrapWithJWTMiddleware(gradStatus.GetGradStatusByUserIDHandler))
+	router.POST("/graduation-status/list/:year", wrapWithJWTMiddleware(gradStatus.GetGradStatusByGradYear))
+	router.POST("/graduation-status/update", wrapWithJWTMiddleware(gradStatus.UpdateGradStatus))
+
+	router.POST("/student/get/list/userid/:userid", wrapWithJWTMiddleware(student.GetStudentListDetailedByUserIDHandler))
 
 	srv := &fasthttp.Server{
 		Handler: router.Handler,
@@ -36,4 +39,8 @@ func RunDBHttpServer(port string) {
 		log.Fatalf("(Error): error running the server : %v", err)
 	}
 	log.Println("DB HTTP Server is closed gracefully.")
+}
+
+func wrapWithJWTMiddleware(requestHandler fasthttp.RequestHandler) fasthttp.RequestHandler {
+	return middleware.JWTMiddleware(requestHandler)
 }

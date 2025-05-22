@@ -6,15 +6,16 @@ import (
 )
 
 type GraduationStatus struct {
-	ID                 int  `gorm:"column:id;type:int(11);primaryKey" json:"id"`
-	Year               int  `gorm:"column:id;type:int(13);not null" json:"year"`
-	StudentID          int  `gorm:"column:student_id;type:int(11);not null" json:"student_id"`
-	StudentSemester    int  `gorm:"column:student_semester;type:int(5);not null" json:"student_semester"`
-	StudentGPA         float64  `gorm:"column:student_gpa;type:double;not null" json:"student_gpa"` //TODO change to float
-	IsAdvisorConfirmed bool `gorm:"not null" json:"is_advisor_confirmed"`
-	IsDepSecConfirmed  bool `gorm:"not null" json:"is_dep_sec_confirmed"`
-	IsFacultyConfirmed bool `gorm:"not null" json:"is_faculty_confirmed"`
-	IsStdAffConfirmed  bool `gorm:"not null" json:"is_std_aff_confirmed"`
+	ID                 int     `gorm:"column:id;type:int(11);primaryKey;autoIncrement" json:"id"`
+	Year               int     `gorm:"column:id;type:int(13);not null" json:"year"`
+	StudentID          int     `gorm:"column:student_id;type:int(11);not null" json:"student_id"`
+	StudentSemester    int     `gorm:"column:student_semester;type:int(13);not null" json:"student_semester"`
+	StudentGPA         float64 `gorm:"column:student_gpa;type:double;not null" json:"student_gpa"`
+	StudentCredits     int     `gorm:"column:student_credits;type:int(13);not null" json:"student_credits"`
+	IsAdvisorConfirmed int     `gorm:"column:is_advisor_confirmed;type:int(1);not null" json:"is_advisor_confirmed"`
+	IsDepSecConfirmed  int     `gorm:"column:is_dep_sec_confirmed;type:int(1);not null" json:"is_dep_sec_confirmed"`
+	IsFacultyConfirmed int     `gorm:"column:is_faculty_confirmed;type:int(1);not null" json:"is_faculty_confirmed"`
+	IsStdAffConfirmed  int     `gorm:"column:is_std_aff_confirmed;type:int(1);not null" json:"is_std_aff_confirmed"`
 }
 
 func (GraduationStatus) TableName() string {
@@ -56,7 +57,6 @@ func GetGraduationStatusByStudentID(studentID int) GraduationStatus {
 	}
 	return res
 }
-
 
 // Create graduation_status
 func CreateGraduationStatus(graduation_status *GraduationStatus) error {

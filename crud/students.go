@@ -23,10 +23,65 @@ func GetStudents() []Student {
 	return students
 }
 
+func GetStudentsByAdvisorID(advisor_id int) []Student {
+	var students []Student
+	if err := globals.GMSDB.Find(&students, "advisor_id = ?", advisor_id).Error; err != nil {
+		log.Printf("(Error) : error getting students : %v", err)
+	}
+	return students //advisor department secratery
+}
+
+func GetStudentsByDepartmentSecretaryID(sec_id int) []Student {
+	var students []Student
+
+	err := globals.GMSDB.Raw(`
+		SELECT students.*
+		FROM department_secretaries
+		JOIN advisors ON advisors.department_name = department_secretaries.department_name
+		JOIN students ON students.advisor_id = advisors.id
+		WHERE department_secretaries.id = ?`, sec_id).Scan(&students).Error
+	if err != nil {
+		log.Printf("(Error) : error getting students : %v", err)
+	}
+	return students //advisor department secratery
+}
+
+func GetStudentsByFacultySecretaryID(sec_id int) []Student {
+	var students []Student
+
+	err := globals.GMSDB.Raw(`
+		SELECT students.*
+		FROM faculty_secretaries
+		JOIN faculties ON faculties.faculty_name = faculty_secretaries.faculty_name
+		JOIN departments ON departments.faculty_name = faculties.faculty_name
+		JOIN advisors ON advisors.department_name = departments.department_name
+		JOIN students ON students.advisor_id = advisors.id
+		WHERE faculty_secretaries.id = ?
+	`, sec_id).Scan(&students).Error
+
+	if err != nil {
+		log.Printf("Error getting students %v", err)
+	}
+	return students
+}
+
 // Get student by ID
 func GetStudentByID(id int) Student {
 	var student Student
 	if err := globals.GMSDB.Where("id = ?", id).First(&student).Error; err != nil {
+		log.Printf("(Error) : error getting student : %v", err)
+	}
+	return student
+}
+
+func GetStudentByUsername(username string) Student {
+	var student Student
+	err := globals.GMSDB.Table("students").
+		Joins("JOIN users ON users.id = students.id").
+		Where("users.username = ?", username).
+		First(&student).Error
+
+	if err != nil {
 		log.Printf("(Error) : error getting student : %v", err)
 	}
 	return student

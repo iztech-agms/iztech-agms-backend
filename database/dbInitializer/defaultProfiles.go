@@ -5,6 +5,24 @@ import (
 )
 
 func InitializeDefaultProfiles() {
+	if len(crud.GetRoles()) == 0 {
+		// Default Roles
+		crud.CreateRole(&crud.Role{
+			Name: "student",
+		})
+		crud.CreateRole(&crud.Role{
+			Name: "advisor",
+		})
+		crud.CreateRole(&crud.Role{
+			Name: "department_secretary",
+		})
+		crud.CreateRole(&crud.Role{
+			Name: "faculty_secretary",
+		})
+		crud.CreateRole(&crud.Role{
+			Name: "student_affairs",
+		})
+	}
 
 	if len(crud.GetFaculties()) == 0 {
 		// Default faculties
@@ -105,98 +123,134 @@ func InitializeDefaultProfiles() {
 
 	if len(crud.GetStudentAffairss()) == 0 {
 		// Default Student affairs
-		crud.CreateUser(&crud.User{
-			ID:        5,
+		user := &crud.User{
 			Username:  "stdaff1",
 			Password:  "1",
+			Telephone: "todo",
 			Role:      "student_affairs",
 			FirstName: "William",
 			LastName:  "Johnson",
-		})
+		}
+		crud.CreateUser(user)
 		crud.CreateStudentAffairs(&crud.StudentAffairs{
-			ID: 5,
+			ID:             user.ID,
+			OfficeLocation: "todo",
 		})
 	}
 
 	if len(crud.GetFacultySecretaries()) == 0 {
 		// Default faculty secretaries
-		crud.CreateUser(&crud.User{
-			ID:        4,
+		user := &crud.User{
 			Username:  "facsec1",
 			Password:  "1",
+			Telephone: "todo",
 			Role:      "faculty_secretary",
 			FirstName: "Robert",
 			LastName:  "Johnson",
-		})
+		}
+		crud.CreateUser(user)
 		crud.CreateFacultySecretary(&crud.FacultySecretary{
-			ID:          4,
-			FacultyName: "Engineering",
+			ID:             user.ID,
+			FacultyName:    "Engineering",
+			OfficeLocation: "todo",
 		})
 	}
 
 	if len(crud.GetDepartmentSecretaries()) == 0 {
 		// Default department secretaries
-		crud.CreateUser(&crud.User{
-			ID:        3,
+		user := &crud.User{
 			Username:  "depsec1",
 			Password:  "1",
+			Telephone: "todo",
 			Role:      "department_secretary",
 			FirstName: "Bob",
 			LastName:  "Johnson",
-		})
+		}
+		crud.CreateUser(user)
 		crud.CreateDepartmentSecretary(&crud.DepartmentSecretary{
-			ID:             3,
+			ID:             user.ID,
 			DepartmentName: "Computer Engineering",
+			OfficeLocation: "todo",
 		})
 	}
 
 	if len(crud.GetAdvisors()) == 0 {
 
 		// Default advisors
-		crud.CreateUser(&crud.User{
-			ID:        1,
-			Username:  "advisor1",
+		user := &crud.User{
+			Username:  "buketoksuzoglu@iyte.edu.tr",
 			Password:  "4321",
+			Telephone: "+90 232 750 7864",
 			Role:      "advisor",
-			FirstName: "John",
-			LastName:  "Johnson",
-		})
+			FirstName: "Buket",
+			LastName:  "Erşahin",
+		}
+
+		crud.CreateUser(user)
+		// Now use the auto-generated user.ID for the advisor
 		crud.CreateAdvisor(&crud.Advisor{
-			ID:             1,
+			ID:             user.ID,
 			DepartmentName: "Computer Engineering",
+			OfficeLocation: "todo",
 		})
 
-		crud.CreateUser(&crud.User{
-			ID:        2,
+		user = &crud.User{
 			Username:  "290201064",
 			Password:  "samet123",
+			Telephone: "todo",
 			Role:      "student",
 			FirstName: "Samet",
 			LastName:  "Hodaman",
-		})
+		}
+		crud.CreateUser(user)
 		crud.CreateStudent(&crud.Student{
-			ID:        2,
-			AdvisorID: 1,
+			ID:        user.ID,
+			AdvisorID: crud.GetAdvisorByUsername("buketoksuzoglu@iyte.edu.tr").ID,
 		})
 
 		crud.CreateNotification(&crud.Notification{
-			UserID:             2,
+			UserID:             user.ID,
 			IsNotificationRead: false,
 			Title:              "Welcome to the system",
 			Message:            "Enjoy the system!	",
 		})
+
+		user = &crud.User{
+			Username:  "300201079",
+			Password:  "1234",
+			Telephone: "todo",
+			Role:      "student",
+			FirstName: "Bahadir Efe",
+			LastName:  "AVSAR",
+		}
+		crud.CreateUser(user)
+		crud.CreateStudent(&crud.Student{
+			ID:        user.ID,
+			AdvisorID: crud.GetAdvisorByUsername("buketoksuzoglu@iyte.edu.tr").ID,
+		})
 	}
 	if len(crud.GetGraduationStatuses()) == 0 {
 		crud.CreateGraduationStatus(&crud.GraduationStatus{
-			ID:                 1,
 			Year:               2025,
-			StudentID:          2,
+			StudentID:          crud.GetStudentByUsername("290201064").ID,
 			StudentSemester:    8,
 			StudentGPA:         2.5,
-			IsAdvisorConfirmed: false,
-			IsDepSecConfirmed:  false,
-			IsFacultyConfirmed: false,
-			IsStdAffConfirmed:  false,
+			StudentCredits:     121,
+			IsAdvisorConfirmed: 2,
+			IsDepSecConfirmed:  2,
+			IsFacultyConfirmed: 2,
+			IsStdAffConfirmed:  2,
+		})
+		crud.CreateGraduationStatus(&crud.GraduationStatus{
+			Year:               2025,
+			StudentID:          crud.GetStudentByUsername("300201079").ID,
+			StudentSemester:    8,
+			StudentGPA:         2.6,
+			StudentCredits:     120,
+			IsAdvisorConfirmed: 2,
+			IsDepSecConfirmed:  2,
+			IsFacultyConfirmed: 2,
+			IsStdAffConfirmed:  2,
 		})
 	}
 

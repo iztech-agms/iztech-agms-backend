@@ -11,8 +11,11 @@ func CreateTables() {
 		log.Fatal("Database is not initialized")
 	}
 
-
 	//Tables (There is probably a much better way to do this. -Bahadır)
+	if err := globals.GMSDB.AutoMigrate(&crud.Role{}); err != nil {
+		log.Fatalf("(Error) : error creating tables : %v", err)
+	}
+
 	if err := globals.GMSDB.AutoMigrate(&crud.User{}); err != nil {
 		log.Fatalf("(Error) : error creating tables : %v", err)
 	}
@@ -20,7 +23,7 @@ func CreateTables() {
 	if err := globals.GMSDB.AutoMigrate(&crud.Advisor{}); err != nil {
 		log.Fatalf("(Error) : error creating tables : %v", err)
 	}
-	
+
 	if err := globals.GMSDB.AutoMigrate(&crud.DepartmentSecretary{}); err != nil {
 		log.Fatalf("(Error) : error creating tables : %v", err)
 	}

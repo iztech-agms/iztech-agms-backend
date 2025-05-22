@@ -8,6 +8,7 @@ import (
 type FacultySecretary struct {
 	ID          int    `gorm:"column:id;type:int(11);primaryKey" json:"id"`
 	FacultyName string `gorm:"column:faculty_name;type:varchar(255);not null" json:"faculty_name"`
+	OfficeLocation string `gorm:"column:office_location;type:varchar(255);not null" json:"office_location"`
 }
 
 func (FacultySecretary) TableName() string {

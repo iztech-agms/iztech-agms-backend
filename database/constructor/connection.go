@@ -70,6 +70,12 @@ func CreateDatabaseGMSIfNotExists(dbConf DBConnectionConfig) error {
 
 	defer sqlDB.Close()
 
+	// Clear Database
+	err = db.Exec("DROP DATABASE IF EXISTS " + dbConf.DbName + ";").Error
+	if err != nil {
+		return fmt.Errorf("error while clearing database: %v", err)
+	}
+
 	err = db.Exec("CREATE DATABASE IF NOT EXISTS " + dbConf.DbName + ";").Error
 	if err != nil {
 		return fmt.Errorf("error while creating database: %v", err)
