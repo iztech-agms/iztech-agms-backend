@@ -30,6 +30,7 @@ func GetGradStatusByUserIDHandler(ctx *fasthttp.RequestCtx) {
 			}
 			return
 		}
+
 		if stdId == 0 {
 			log.Printf("User ID is not provided at endpoint (%s).", path)
 			if err := json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "User ID is not provided"}); err != nil {
@@ -40,6 +41,14 @@ func GetGradStatusByUserIDHandler(ctx *fasthttp.RequestCtx) {
 
 		// Get graduation status matching with stdId
 		res := crud.GetGraduationStatusByStudentID(stdId)
+
+		if res.ID == 0 {
+			if err := json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "100", Message: "Application required"}); err != nil {
+				log.Printf("Error encoding response at endpoint (%s): %v", path, err)
+			}
+			return
+		}
+
 		resp := make([]crud.GraduationStatus, 1)
 		resp[0] = res
 		if err := json.NewEncoder(ctx).Encode(response.GraduationStatusResp{

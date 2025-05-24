@@ -7,16 +7,16 @@ import (
 
 type GraduationStatus struct {
 	ID                 int     `gorm:"column:id;type:int(11);primaryKey;autoIncrement" json:"id"`
-	Year               int     `gorm:"column:id;type:int(13);not null" json:"year"`
-	StudentID          int     `gorm:"column:student_id;type:int(11);not null" json:"student_id"`
+	Year               int     `gorm:"column:year;type:int(13);not null" json:"year"`
+	StudentID          int     `gorm:"column:student_id;type:int(11);not null;unique" json:"student_id"`
 	StudentSemester    int     `gorm:"column:student_semester;type:int(13);not null" json:"student_semester"`
 	StudentGPA         float64 `gorm:"column:student_gpa;type:double;not null" json:"student_gpa"`
 	StudentCredits     int     `gorm:"column:student_credits;type:int(13);not null" json:"student_credits"`
 	IsSystemConfirmed  int     `gorm:"column:is_system_confirmed;type:int(1);not null;" json:"is_system_confirmed"`
-	IsAdvisorConfirmed int     `gorm:"column:is_advisor_confirmed;type:int(1);not null" json:"is_advisor_confirmed"`
-	IsDepSecConfirmed  int     `gorm:"column:is_dep_sec_confirmed;type:int(1);not null" json:"is_dep_sec_confirmed"`
-	IsFacultyConfirmed int     `gorm:"column:is_faculty_confirmed;type:int(1);not null" json:"is_faculty_confirmed"`
-	IsStdAffConfirmed  int     `gorm:"column:is_std_aff_confirmed;type:int(1);not null" json:"is_std_aff_confirmed"`
+	IsAdvisorConfirmed int     `gorm:"column:is_advisor_confirmed;type:int(1);default:2;not null" json:"is_advisor_confirmed"`
+	IsDepSecConfirmed  int     `gorm:"column:is_dep_sec_confirmed;type:int(1);default:2;not null" json:"is_dep_sec_confirmed"`
+	IsFacultyConfirmed int     `gorm:"column:is_faculty_confirmed;type:int(1);default:2;not null" json:"is_faculty_confirmed"`
+	IsStdAffConfirmed  int     `gorm:"column:is_std_aff_confirmed;type:int(1);default:2;not null" json:"is_std_aff_confirmed"`
 }
 
 func (GraduationStatus) TableName() string {

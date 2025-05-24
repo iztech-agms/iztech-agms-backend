@@ -567,3 +567,61 @@
 2025/05/24 15:32:12 Log output is set to ../logs/server.log
 2025/05/24 15:32:17 (Error) : error getting advisor : record not found
 2025/05/24 15:32:19 DB HTTP Server is started listening on port : 8080
+2025/05/24 18:45:35 (Error) : error getting graduation_status : record not found
+2025/05/24 18:51:07 Log output is set to ../logs/server.log
+2025/05/24 18:51:14 DB HTTP Server is started listening on port : 8080
+2025/05/24 19:00:27 Log output is set to ../logs/server.log
+2025/05/24 19:00:34 DB HTTP Server is started listening on port : 8080
+2025/05/24 19:08:31 (Error) : error getting graduation_status : record not found
+2025/05/24 19:15:59 Log output is set to ../logs/server.log
+2025/05/24 19:16:05 DB HTTP Server is started listening on port : 8080
+2025/05/24 19:17:26 Log output is set to ../logs/server.log
+2025/05/24 19:17:34 DB HTTP Server is started listening on port : 8080
+2025/05/24 19:17:49 Request body: {"id":30,"student_id":30,"advisor_id":3,"student":{"id":30,"advisor_id":3},"user":{"id":30,"first_name":"Gizem","last_name":"Karaca","telephone":"todo","email":"todo","username":"277861066","password":"$2a$10$VfGQoHPIzg6sqWNt1IbzK.cemjCEjDHxr17UbvCr25WVAZESAKEt6","role":"student"},"graduation_status":{"id":5,"year":2025,"student_id":30,"student_semester":9,"student_gpa":3.04,"student_credits":142,"is_system_confirmed":0,"is_advisor_confirmed":3,"is_dep_sec_confirmed":2,"is_faculty_confirmed":2,"is_std_aff_confirmed":2}}
+2025/05/24 19:17:49 Decoded body: {ID:30 Year:0 StudentID:30 StudentSemester:0 StudentGPA:0 StudentCredits:0 IsSystemConfirmed:0 IsAdvisorConfirmed:0 IsDepSecConfirmed:0 IsFacultyConfirmed:0 IsStdAffConfirmed:0}
+2025/05/24 19:23:24 Request body: {"id":13,"year":2025,"student_id":38,"student_semester":10,"student_gpa":3.14,"student_credits":155,"is_system_confirmed":0,"is_advisor_confirmed":3,"is_dep_sec_confirmed":2,"is_faculty_confirmed":2,"is_std_aff_confirmed":2}
+2025/05/24 19:23:24 Decoded body: {ID:13 Year:2025 StudentID:38 StudentSemester:10 StudentGPA:3.14 StudentCredits:155 IsSystemConfirmed:0 IsAdvisorConfirmed:3 IsDepSecConfirmed:2 IsFacultyConfirmed:2 IsStdAffConfirmed:2}
+2025/05/24 19:23:43 Request body: {"id":17,"year":2025,"student_id":42,"student_semester":9,"student_gpa":2.35,"student_credits":137,"is_system_confirmed":0,"is_advisor_confirmed":3,"is_dep_sec_confirmed":2,"is_faculty_confirmed":2,"is_std_aff_confirmed":2}
+2025/05/24 19:23:43 Decoded body: {ID:17 Year:2025 StudentID:42 StudentSemester:9 StudentGPA:2.35 StudentCredits:137 IsSystemConfirmed:0 IsAdvisorConfirmed:3 IsDepSecConfirmed:2 IsFacultyConfirmed:2 IsStdAffConfirmed:2}
+2025/05/24 19:29:45 Log output is set to ../logs/server.log
+2025/05/24 19:29:52 DB HTTP Server is started listening on port : 8080
+2025/05/24 19:49:28 (Error) : error getting graduation_status : record not found
+2025/05/24 19:49:30 (Error) : error getting graduation_status : record not found
+2025/05/24 19:49:41 (Error) : error getting graduation_status : record not found
+2025/05/24 19:52:09 (Error) : error getting graduation_status : record not found
+2025/05/24 19:52:18 (Error) : error getting graduation_status : record not found
+2025/05/24 19:52:37 (Error) : error getting graduation_status : record not found
+2025/05/24 19:52:42 (Error) : error getting graduation_status : record not found
+2025/05/24 19:53:02 Log output is set to ../logs/server.log
+2025/05/24 19:53:11 DB HTTP Server is started listening on port : 8080
+2025/05/24 19:53:30 (Error) : error getting graduation_status : record not found
+2025/05/24 19:53:54 (Error) : error getting graduation_status : record not found
+2025/05/24 19:53:59 (Error) : error getting graduation_status : record not found
+2025/05/24 19:54:25 (Error) : error getting graduation_status : record not found
+2025/05/24 19:54:26 (Error) : error getting graduation_status : record not found
+2025/05/24 19:54:41 (Error) : error getting graduation_status : record not found
+2025/05/24 19:54:47 (Error) : error getting graduation_status : record not found
+2025/05/24 19:57:26 (Error) : error getting graduation_status : record not found
+2025/05/24 19:57:26 (Error) : error getting graduation_status : record not found
+2025/05/24 19:57:26 (Error) : error getting graduation_status : record not found
+2025/05/24 19:58:21 (Error) : error getting graduation_status : record not found
+2025/05/24 20:04:03 Log output is set to ../logs/server.log
+2025/05/24 20:04:15 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:07:08 Log output is set to ../logs/server.log
+2025/05/24 20:07:14 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:09:12 Log output is set to ../logs/server.log
+2025/05/24 20:09:18 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:09:51 Log output is set to ../logs/server.log
+2025/05/24 20:09:58 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:10:53 Log output is set to ../logs/server.log
+2025/05/24 20:11:13 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:18:55 Log output is set to ../logs/server.log
+2025/05/24 20:19:03 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:19:50 Log output is set to ../logs/server.log
+2025/05/24 20:19:59 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:20:22 Log output is set to ../logs/server.log
+2025/05/24 20:20:44 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:21:51 Log output is set to ../logs/server.log
+2025/05/24 20:21:56 DB HTTP Server is started listening on port : 8080
+2025/05/24 20:22:41 Log output is set to ../logs/server.log
+2025/05/24 20:23:47 DB HTTP Server is started listening on port : 8080

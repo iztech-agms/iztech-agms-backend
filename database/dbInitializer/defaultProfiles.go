@@ -15,6 +15,7 @@ type GraduationStatusJSON struct {
 	StudentSemester    int     `json:"student_semester"`
 	StudentGPA         float64 `json:"student_gpa"`
 	StudentCredits     int     `json:"student_credits"`
+	IsSystemConfirmed  int     `json:"is_system_confirmed"`
 	IsAdvisorConfirmed int     `json:"is_advisor_confirmed"`
 	IsDepSecConfirmed  int     `json:"is_dep_sec_confirmed"`
 	IsFacultyConfirmed int     `json:"is_faculty_confirmed"`
@@ -133,6 +134,7 @@ func importGraduationStatusesFromJSON(filePath string) error {
 			StudentSemester:    s.StudentSemester,
 			StudentGPA:         s.StudentGPA,
 			StudentCredits:     s.StudentCredits,
+			IsSystemConfirmed:  s.IsSystemConfirmed,
 			IsAdvisorConfirmed: s.IsAdvisorConfirmed,
 			IsDepSecConfirmed:  s.IsDepSecConfirmed,
 			IsFacultyConfirmed: s.IsFacultyConfirmed,

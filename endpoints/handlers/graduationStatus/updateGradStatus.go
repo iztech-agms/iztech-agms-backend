@@ -2,10 +2,11 @@ package gradStatus
 
 import (
 	"encoding/json"
-	"github.com/valyala/fasthttp"
 	"graduation-system/crud"
 	"graduation-system/endpoints/response"
 	"log"
+
+	"github.com/valyala/fasthttp"
 )
 
 type CreateGradStatusReq struct {
@@ -26,8 +27,8 @@ func UpdateGradStatus(ctx *fasthttp.RequestCtx) {
 		}
 		return
 	default:
-		var body crud.GraduationStatus
-		if err := json.Unmarshal(ctx.PostBody(), &body); err != nil {
+		var gradStatus crud.GraduationStatus
+		if err := json.Unmarshal(ctx.PostBody(), &gradStatus); err != nil {
 			log.Printf("Error decoding request at endpoint (%s): %v", path, err)
 			if err = json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "Error decoding request"}); err != nil {
 				log.Printf("Error encoding response at endpoint (%s): %v", path, err)
@@ -35,7 +36,7 @@ func UpdateGradStatus(ctx *fasthttp.RequestCtx) {
 			return
 		}
 
-		if err := crud.UpdateGraduationStatus(body); err != nil {
+		if err := crud.UpdateGraduationStatus(gradStatus); err != nil {
 			log.Printf("Internal Server Error : %v", err)
 			if err = json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "Internal Server Error"}); err != nil {
 				log.Printf("Error encoding response at endpoint (%s): %v", path, err)
@@ -88,4 +89,3 @@ func CreateGradStatus(ctx *fasthttp.RequestCtx) {
 	}
 
 }
-

@@ -76,7 +76,7 @@ func CreateDatabaseGMSIfNotExists(dbConf DBConnectionConfig) error {
 		return fmt.Errorf("error while clearing database: %v", err)
 	}
 
-	err = db.Exec("CREATE DATABASE IF NOT EXISTS " + dbConf.DbName + ";").Error
+	err = db.Exec("CREATE DATABASE IF NOT EXISTS " + dbConf.DbName + " DEFAULT CHARACTER SET = 'utf8mb4' DEFAULT COLLATE 'utf8mb4_unicode_ci';").Error
 	if err != nil {
 		return fmt.Errorf("error while creating database: %v", err)
 	}
