@@ -76,3 +76,12 @@ func GetStudentListByUserIDHandler(ctx *fasthttp.RequestCtx) {
 		}
 	}
 }
+
+func GetAllUsersTest(ctx *fasthttp.RequestCtx) {
+	resp := crud.GetUsers()
+	if err := json.NewEncoder(ctx).Encode(resp); err != nil {
+		log.Printf("Error encoding response at endpoint Test Users: %v", err)
+		return
+	}
+
+}

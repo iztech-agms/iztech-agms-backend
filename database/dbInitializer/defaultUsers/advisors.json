@@ -1,0 +1,135 @@
+[
+  {
+    "username": "buketoksuzoglu@iyte.edu.tr",
+    "email": "todo",
+    "password": "1",
+    "telephone": "+90 232 750 7864",
+    "role": "advisor",
+    "first_name": "Buket",
+    "last_name": "Erşahin",
+    "department_name": "Computer Engineering",
+    "office_location": "CENG 139"
+  },
+  {
+    "username": "cuneytbazlamacci@iyte.edu.tr",
+    "email": "cuneytbazlamacci@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7877",
+    "role": "advisor",
+    "first_name": "Cüneyt F.",
+    "last_name": "Bazlamaçcı",
+    "department_name": "Computer Engineering",
+    "office_location": "CENG 105"
+  },
+  {
+    "username": "onurdemirors@iyte.edu.tr",
+    "email": "onurdemirors@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7881",
+    "role": "advisor",
+    "first_name": "Onur",
+    "last_name": "Demirörs",
+    "department_name": "Computer Engineering",
+    "office_location": "CENG 107"
+  },
+  {
+    "username": "neslierdogmus@iyte.edu.tr",
+    "email": "neslierdogmus@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7887",
+    "role": "advisor",
+    "first_name": "Nesli",
+    "last_name": "Erdoğmuş",
+    "department_name": "Computer Engineering",
+    "office_location": "CENG 138"
+  },
+  {
+    "username": "mustafaaltinkaya@iyte.edu.tr",
+    "email": "mustafaaltinkaya@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 6529",
+    "role": "advisor",
+    "first_name": "Mustafa",
+    "last_name": "Altınkaya",
+    "department_name": "Electrical-Electronics Engineering",
+    "office_location": "todo"
+  },
+  {
+    "username": "barisatakan@iyte.edu.tr",
+    "email": "barisatakan@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 6568",
+    "role": "advisor",
+    "first_name": "Barış",
+    "last_name": "Atakan",
+    "department_name": "Electrical-Electronics Engineering",
+    "office_location": "todo"
+  },
+  {
+    "username": "ahmeteroglu@iyte.edu.tr",
+    "email": "ahmeteroglu@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7524",
+    "role": "advisor",
+    "first_name": "Ahmet E.",
+    "last_name": "Eroğlu",
+    "department_name": "Chemistry",
+    "office_location": "A-334"
+  },
+  {
+    "username": "hurriyetpolat@iyte.edu.tr",
+    "email": "hurriyetpolat@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7531",
+    "role": "advisor",
+    "first_name": "Hürriyet",
+    "last_name": "Polat",
+    "department_name": "Chemistry",
+    "office_location": "A-308"
+  },
+  {
+    "username": "lutfiozyuzer@iyte.edu.tr",
+    "email": "lutfiozyuzer@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7705",
+    "role": "advisor",
+    "first_name": "Lütfi",
+    "last_name": "Özyüzer",
+    "department_name": "Physics",
+    "office_location": "G122"
+  },
+  {
+    "username": "serkanates@iyte.edu.tr",
+    "email": "serkanates@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7727",
+    "role": "advisor",
+    "first_name": "Serkan",
+    "last_name": "Ateş",
+    "department_name": "Physics",
+    "office_location": "G125"
+  },
+  {
+    "username": "tongucakis@iyte.edu.tr",
+    "email": "tongucakis@iyte.edu.tr",
+    "password": "1",
+    "telephone": "todo",
+    "role": "advisor",
+    "first_name": "Tonguç",
+    "last_name": "Akış",
+    "department_name": "Architecture",
+    "office_location": "todo"
+  },
+  {
+    "username": "tahsinbasaran@iyte.edu.tr",
+    "email": "tahsinbasaran@iyte.edu.tr",
+    "password": "1",
+    "telephone": "todo",
+    "role": "advisor",
+    "first_name": "Tahsin",
+    "last_name": "Başaran",
+    "department_name": "Architecture",
+    "office_location": "todo"
+  }
+]
+

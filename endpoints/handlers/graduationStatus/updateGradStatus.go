@@ -12,7 +12,7 @@ type CreateGradStatusReq struct {
 	ID              int     `json:"id"`
 	Year            int     `json:"year"`
 	StudentSemester int     `json:"student_semester"`
-	StudentGPA      float64 `json:"student_gpa"` //TODO change to float
+	StudentGPA      float64 `json:"student_gpa"`
 }
 
 func UpdateGradStatus(ctx *fasthttp.RequestCtx) {

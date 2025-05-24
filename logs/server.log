@@ -372,3 +372,198 @@
 2025/05/23 00:42:23 Invalid password at endpoint (/auth/login).
 2025/05/23 00:44:21 (Error) : error getting user : record not found
 2025/05/23 00:44:21 User not found at endpoint (/auth/login).
+2025/05/23 00:55:24 Log output is set to ../logs/server.log
+2025/05/23 00:55:24 DB HTTP Server is started listening on port : 8080
+2025/05/23 00:55:43 Invalid password at endpoint (/auth/login).
+2025/05/23 00:56:31 Invalid password at endpoint (/auth/login).
+2025/05/23 09:56:55 (Error) : error getting user : record not found
+2025/05/23 09:56:55 User not found at endpoint (/auth/login).
+2025/05/24 01:21:39 Log output is set to ../logs/server.log
+2025/05/24 01:21:39 DB HTTP Server is started listening on port : 8080
+2025/05/24 01:25:53 (Error) : error getting user : record not found
+2025/05/24 01:25:53 User not found at endpoint (/auth/login).
+2025/05/24 01:42:36 (Error) : error getting user : record not found
+2025/05/24 01:42:36 User not found at endpoint (/auth/login).
+2025/05/24 01:50:14 Log output is set to ../logs/server.log
+2025/05/24 01:50:15 DB HTTP Server is started listening on port : 8080
+2025/05/24 02:01:13 Log output is set to ../logs/server.log
+2025/05/24 02:01:14 DB HTTP Server is started listening on port : 8080
+2025/05/24 02:01:34 Invalid password at endpoint (/auth/login).
+2025/05/24 12:17:12 Error parsing JWT token at JWT Middleware: Token is expired
+2025/05/24 12:17:12 Error parsing JWT token at JWT Middleware: Token is expired
+2025/05/24 12:36:43 Invalid password at endpoint (/auth/login).
+2025/05/24 12:44:20 (Error) : error getting user : record not found
+2025/05/24 12:44:20 User not found at endpoint (/auth/login).
+2025/05/24 12:44:25 Invalid password at endpoint (/auth/login).
+2025/05/24 13:00:18 Invalid password at endpoint (/auth/login).
+2025/05/24 13:00:31 Invalid password at endpoint (/auth/login).
+2025/05/24 13:00:57 (Error) : error getting user : record not found
+2025/05/24 13:00:57 User not found at endpoint (/auth/login).
+2025/05/24 13:01:37 Invalid password at endpoint (/auth/login).
+2025/05/24 13:01:45 Invalid password at endpoint (/auth/login).
+2025/05/24 15:16:31 Log output is set to ../logs/server.log
+2025/05/24 15:16:31 Error loading directory database/dbInitializer/defaultUsers: open database/dbInitializer/defaultUsers: no such file or directory
+2025/05/24 15:16:31 DB HTTP Server is started listening on port : 8080
+2025/05/24 15:17:31 (Error) : error getting user : record not found
+2025/05/24 15:17:31 User not found at endpoint (/auth/login).
+2025/05/24 15:17:41 (Error) : error getting user : record not found
+2025/05/24 15:17:41 User not found at endpoint (/auth/login).
+2025/05/24 15:20:07 Log output is set to ../logs/server.log
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:09 (Error) : error getting student : record not found
+2025/05/24 15:20:10 (Error) : error getting student : record not found
+2025/05/24 15:20:10 (Error) : error getting student : record not found
+2025/05/24 15:20:10 (Error) : error getting student : record not found
+2025/05/24 15:20:10 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:10 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:10 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:10 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:11 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error creating user : Error 1062 (23000): Duplicate entry '' for key 'users.uni_users_username'
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:12 (Error) : error getting student : record not found
+2025/05/24 15:20:13 (Error) : error getting student : record not found
+2025/05/24 15:20:13 (Error) : error getting student : record not found
+2025/05/24 15:20:13 (Error) : error getting student : record not found
+2025/05/24 15:20:13 (Error) : error getting student : record not found
+2025/05/24 15:20:13 (Error) : error getting student : record not found
+2025/05/24 15:20:13 (Error) : error getting student : record not found
+2025/05/24 15:20:13 (Error) : error getting advisor : record not found
+2025/05/24 15:20:13 (Error) : error getting advisor : record not found
+2025/05/24 15:20:13 (Error) : error getting advisor : record not found
+2025/05/24 15:20:13 (Error) : error getting advisor : record not found
+2025/05/24 15:20:13 (Error) : error getting advisor : record not found
+2025/05/24 15:20:13 (Error) : error getting advisor : record not found
+2025/05/24 15:20:13 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:14 (Error) : error getting advisor : record not found
+2025/05/24 15:20:15 (Error) : error getting advisor : record not found
+2025/05/24 15:20:15 (Error) : error getting advisor : record not found
+2025/05/24 15:20:15 (Error) : error getting advisor : record not found
+2025/05/24 15:20:15 (Error) : error getting advisor : record not found
+2025/05/24 15:20:15 (Error) : error getting advisor : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 (Error) : error getting student : record not found
+2025/05/24 15:20:15 DB HTTP Server is started listening on port : 8080
+2025/05/24 15:26:38 Log output is set to ../logs/server.log
+2025/05/24 15:26:42 (Error) : error getting advisor : record not found
+2025/05/24 15:26:42 (Error) : error getting advisor : record not found
+2025/05/24 15:26:42 (Error) : error getting advisor : record not found
+2025/05/24 15:26:43 (Error) : error getting advisor : record not found
+2025/05/24 15:26:43 (Error) : error getting advisor : record not found
+2025/05/24 15:26:43 (Error) : error getting advisor : record not found
+2025/05/24 15:26:43 (Error) : error getting advisor : record not found
+2025/05/24 15:26:43 (Error) : error getting advisor : record not found
+2025/05/24 15:26:44 (Error) : error getting advisor : record not found
+2025/05/24 15:26:44 (Error) : error getting advisor : record not found
+2025/05/24 15:26:44 (Error) : error getting advisor : record not found
+2025/05/24 15:26:44 (Error) : error getting advisor : record not found
+2025/05/24 15:26:44 (Error) : error getting advisor : record not found
+2025/05/24 15:26:44 (Error) : error getting advisor : record not found
+2025/05/24 15:26:45 (Error) : error getting advisor : record not found
+2025/05/24 15:26:45 (Error) : error getting advisor : record not found
+2025/05/24 15:26:45 (Error) : error getting advisor : record not found
+2025/05/24 15:26:45 (Error) : error getting advisor : record not found
+2025/05/24 15:26:45 (Error) : error getting advisor : record not found
+2025/05/24 15:26:46 (Error) : error getting advisor : record not found
+2025/05/24 15:26:46 (Error) : error getting advisor : record not found
+2025/05/24 15:26:46 DB HTTP Server is started listening on port : 8080
+2025/05/24 15:29:54 Log output is set to ../logs/server.log
+2025/05/24 15:29:56 (Error) : error getting advisor : record not found
+2025/05/24 15:29:57 (Error) : error getting advisor : record not found
+2025/05/24 15:29:57 (Error) : error getting advisor : record not found
+2025/05/24 15:29:57 (Error) : error getting advisor : record not found
+2025/05/24 15:29:57 (Error) : error getting advisor : record not found
+2025/05/24 15:29:57 (Error) : error getting advisor : record not found
+2025/05/24 15:29:58 (Error) : error getting advisor : record not found
+2025/05/24 15:29:58 (Error) : error getting advisor : record not found
+2025/05/24 15:29:58 (Error) : error getting advisor : record not found
+2025/05/24 15:29:58 (Error) : error getting advisor : record not found
+2025/05/24 15:29:58 (Error) : error getting advisor : record not found
+2025/05/24 15:29:59 (Error) : error getting advisor : record not found
+2025/05/24 15:29:59 (Error) : error getting advisor : record not found
+2025/05/24 15:29:59 (Error) : error getting advisor : record not found
+2025/05/24 15:29:59 (Error) : error getting advisor : record not found
+2025/05/24 15:29:59 (Error) : error getting advisor : record not found
+2025/05/24 15:29:59 (Error) : error getting advisor : record not found
+2025/05/24 15:29:59 (Error) : error getting advisor : record not found
+2025/05/24 15:30:00 (Error) : error getting advisor : record not found
+2025/05/24 15:30:00 (Error) : error getting advisor : record not found
+2025/05/24 15:30:00 (Error) : error getting advisor : record not found
+2025/05/24 15:30:00 DB HTTP Server is started listening on port : 8080
+2025/05/24 15:32:12 Log output is set to ../logs/server.log
+2025/05/24 15:32:17 (Error) : error getting advisor : record not found
+2025/05/24 15:32:19 DB HTTP Server is started listening on port : 8080

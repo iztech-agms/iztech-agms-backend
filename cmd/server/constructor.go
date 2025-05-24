@@ -18,6 +18,7 @@ func RunDBHttpServer(port string) {
 
 	// Endpoints handlers
 	router.POST("/test", test.ExecuteTestHandler)
+	router.POST("/test_getusers", student.GetAllUsersTest) // Delete after use
 	router.POST("/auth/login", auth.AuthLoginHandler)
 
 	router.POST("/notifications/get/user-id/:user-id", wrapWithJWTMiddleware(handlers.GetNotificationsByUserIDHandler))

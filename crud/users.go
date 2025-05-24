@@ -10,6 +10,7 @@ type User struct {
 	FirstName string `gorm:"column:first_name;type:varchar(255);not null" json:"first_name"`
 	LastName  string `gorm:"column:last_name;type:varchar(255);not null" json:"last_name"`
 	Telephone string `gorm:"column:telephone;type:varchar(255);not null" json:"telephone"`
+	Email     string `gorm:"column:email;type:varchar(255);not null" json:"email"`
 	Username  string `gorm:"column:username;type:varchar(255);not null;unique" json:"username"`
 	Password  string `gorm:"column:password;type:varchar(255);not null" json:"password"`
 	Role      string `gorm:"column:role;type:varchar(255);not null" json:"role"`

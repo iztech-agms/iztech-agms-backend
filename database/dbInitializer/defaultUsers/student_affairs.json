@@ -1,0 +1,64 @@
+[
+  {
+    "username": "oidb_aynuryakar@iyte.edu.tr",
+    "email": "aynuryakar@iyte.edu.tr",
+    "password": "1",
+    "telephone": "0 (232) 750 6300",
+    "role": "student_affairs",
+    "first_name": "Aynur",
+    "last_name": "YAKAR",
+    "office_location": "todo"
+  },
+  {
+    "username": "oidb_adilozer@iyte.edu.tr",
+    "email": "oidb@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 6309",
+    "role": "student_affairs",
+    "first_name": "Adil",
+    "last_name": "Özer",
+    "office_location": "todo"
+  },
+  {
+    "username": "oidb_gulayguden@iyte.edu.tr",
+    "email": "oidb@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 6128",
+    "role": "student_affairs",
+    "first_name": "Gülay",
+    "last_name": "Güden",
+    "office_location": "todo"
+  },
+  {
+    "username": "oidb_nazlikopuz@iyte.edu.tr",
+    "email": "oidb@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 6305",
+    "role": "student_affairs",
+    "first_name": "Nazlı",
+    "last_name": "Kopuz",
+    "office_location": "todo"
+  },
+  {
+    "username": "oidb_nezahatinaltekin@iyte.edu.tr",
+    "email": "oidb@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 6314",
+    "role": "student_affairs",
+    "first_name": "Nezahat",
+    "last_name": "İnaltekin",
+    "office_location": "todo"
+  },
+  {
+    "username": "oidb_aynurbas@iyte.edu.tr",
+    "email": "oidb@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 6319",
+    "role": "student_affairs",
+    "first_name": "Aynur",
+    "last_name": "Baş",
+    "office_location": "todo"
+  }
+]
+
+

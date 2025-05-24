@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"graduation-system/crud"
 	"graduation-system/endpoints/response"
+	"graduation-system/util"
 	"log"
 	"time"
 
@@ -54,10 +55,19 @@ func AuthLoginHandler(ctx *fasthttp.RequestCtx) {
 			}
 			return
 		}
+		hashed_password, err:=util.HashPassword(loginReq.Password)
 
-		if user.Password != loginReq.Password {
-			log.Printf("Invalid password at endpoint (%s).", pth)
+		if err != nil {
+			log.Printf("Hashing password failed at endpoint (%s): %v", pth, err)
 			if err := json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "Invalid password"}); err != nil {
+				log.Printf("Error encoding response at endpoint (%s): %v", pth, err)
+			}
+			return
+		}
+
+		if util.CheckPasswordHash(user.Password,hashed_password) {
+			log.Printf("Invalid password at endpoint (%s).", pth)
+			if err := json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "Wrong password"}); err != nil {
 				log.Printf("Error encoding response at endpoint (%s): %v", pth, err)
 			}
 			return
