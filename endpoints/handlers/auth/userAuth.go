@@ -13,14 +13,14 @@ import (
 )
 
 type BasicLoginReq struct {
-	Username      string `json:"username"`
-	Password      string `json:"password"`
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
 type LoginResponse struct {
-	Status  response.ResponseMessage `json:"status"`
-	User    crud.User                `json:"user"`
-	Token   string                   `json:"token"`
+	Status response.ResponseMessage `json:"status"`
+	User   crud.User                `json:"user"`
+	Token  string                   `json:"token"`
 }
 
 // AuthLoginHandler handles the login request for the user
@@ -55,17 +55,8 @@ func AuthLoginHandler(ctx *fasthttp.RequestCtx) {
 			}
 			return
 		}
-		hashed_password, err:=util.HashPassword(loginReq.Password)
 
-		if err != nil {
-			log.Printf("Hashing password failed at endpoint (%s): %v", pth, err)
-			if err := json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "Invalid password"}); err != nil {
-				log.Printf("Error encoding response at endpoint (%s): %v", pth, err)
-			}
-			return
-		}
-
-		if util.CheckPasswordHash(user.Password,hashed_password) {
+		if util.CheckPasswordHash(loginReq.Password, user.Password) {
 			log.Printf("Invalid password at endpoint (%s).", pth)
 			if err := json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "Wrong password"}); err != nil {
 				log.Printf("Error encoding response at endpoint (%s): %v", pth, err)
@@ -76,7 +67,7 @@ func AuthLoginHandler(ctx *fasthttp.RequestCtx) {
 		// Generate JWT token
 		token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 			"username": user.Username,
-			"exp":            time.Now().Add(time.Hour * 24).Unix(),
+			"exp":      time.Now().Add(time.Hour * 24).Unix(),
 		})
 		tokenString, err := token.SignedString([]byte("secret"))
 		if err != nil {
@@ -88,9 +79,9 @@ func AuthLoginHandler(ctx *fasthttp.RequestCtx) {
 		}
 
 		loginResponse := LoginResponse{
-			Status:  response.ResponseMessage{Code: "0", Message: "Login successful"},
-			User: user,
-			Token:   tokenString,
+			Status: response.ResponseMessage{Code: "0", Message: "Login successful"},
+			User:   user,
+			Token:  tokenString,
 		}
 
 		if err := json.NewEncoder(ctx).Encode(loginResponse); err != nil {
@@ -99,6 +90,3 @@ func AuthLoginHandler(ctx *fasthttp.RequestCtx) {
 		}
 	}
 }
-
-
-

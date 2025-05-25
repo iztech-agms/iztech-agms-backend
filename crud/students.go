@@ -6,8 +6,9 @@ import (
 )
 
 type Student struct {
-	ID        int `gorm:"column:id;type:int(11);primaryKey" json:"id"`
-	AdvisorID int `gorm:"column:advisor_id;type:int(11);not null" json:"advisor_id"`
+	ID             int `gorm:"column:id;type:int(11);primaryKey" json:"id"`
+	AdvisorID      int `gorm:"column:advisor_id;type:int(11);not null" json:"advisor_id"`
+	EnrollmentYear int `gorm:"column:enrollment_year;type:int(13);not null" json:"enrollment_year"`
 }
 
 func (Student) TableName() string {
@@ -44,6 +45,33 @@ func GetStudentsByDepartmentSecretaryID(sec_id int) []Student {
 		log.Printf("(Error) : error getting students : %v", err)
 	}
 	return students //advisor department secratery
+}
+
+func GetStudentIDsByDepartmentName(name string) []int {
+	var student_ids []int
+
+	err := globals.GMSDB.Raw(`
+		SELECT students.id
+		FROM departments
+		JOIN advisors ON advisors.department_name = departments.name
+		JOIN students ON students.advisor_id = advisors.id
+		WHERE departments.name= ?`, name).Scan(&student_ids).Error
+	if err != nil {
+		log.Printf("(Error) : error getting students : %v", err)
+	}
+	return student_ids
+}
+
+func GetStudentIDs() []int {
+	var student_ids []int
+
+	err := globals.GMSDB.Raw(`
+		SELECT id
+		FROM students`).Scan(&student_ids).Error
+	if err != nil {
+		log.Printf("(Error) : error getting students : %v", err)
+	}
+	return student_ids
 }
 
 func GetStudentsByFacultySecretaryID(sec_id int) []Student {

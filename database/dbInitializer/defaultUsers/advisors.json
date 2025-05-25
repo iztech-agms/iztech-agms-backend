@@ -1,7 +1,7 @@
 [
   {
     "username": "buketoksuzoglu@iyte.edu.tr",
-    "email": "todo",
+    "email": "buketoksuzoglu@iyte.edu.tr",
     "password": "1",
     "telephone": "+90 232 750 7864",
     "role": "advisor",
@@ -20,6 +20,17 @@
     "last_name": "Bazlamaçcı",
     "department_name": "Computer Engineering",
     "office_location": "CENG 105"
+  },
+  {
+    "username": "isiloz@iyte.edu.tr",
+    "email": "isiloz@iyte.edu.tr",
+    "password": "1",
+    "telephone": "+90 232 750 7879",
+    "role": "advisor",
+    "first_name": "Işıl",
+    "last_name": "Öz",
+    "department_name": "Computer Engineering",
+    "office_location": "CENG 101"
   },
   {
     "username": "onurdemirors@iyte.edu.tr",

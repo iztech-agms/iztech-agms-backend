@@ -14,7 +14,7 @@ type GraduationStatusJSON struct {
 	StudentUsername    string  `json:"student_username"` // Username instead of id
 	StudentSemester    int     `json:"student_semester"`
 	StudentGPA         float64 `json:"student_gpa"`
-	StudentCredits     int     `json:"student_credits"`
+	StudentECTS        int     `json:"student_ects"`
 	IsSystemConfirmed  int     `json:"is_system_confirmed"`
 	IsAdvisorConfirmed int     `json:"is_advisor_confirmed"`
 	IsDepSecConfirmed  int     `json:"is_dep_sec_confirmed"`
@@ -34,6 +34,7 @@ type UserJSON struct {
 	DepartmentName  string `json:"department_name"`
 	FacultyName     string `json:"faculty_name"`
 	OfficeLocation  string `json:"office_location"`
+	EnrollmentYear  int    `json:"enrollment_year"`
 }
 
 func importUsersFromJSON(filePath string) error {
@@ -75,7 +76,11 @@ func importUsersFromJSON(filePath string) error {
 		switch u.Role {
 		case "student":
 			advisor := crud.GetAdvisorByUsername(u.AdvisorUsername)
-			crud.CreateStudent(&crud.Student{ID: user.ID, AdvisorID: advisor.ID})
+			crud.CreateStudent(&crud.Student{
+				ID:             user.ID,
+				AdvisorID:      advisor.ID,
+				EnrollmentYear: u.EnrollmentYear,
+			})
 		case "advisor":
 			crud.CreateAdvisor(&crud.Advisor{
 				ID:             user.ID,
@@ -96,6 +101,11 @@ func importUsersFromJSON(filePath string) error {
 			})
 		case "student_affairs":
 			crud.CreateStudentAffairs(&crud.StudentAffairs{
+				ID:             user.ID,
+				OfficeLocation: u.OfficeLocation,
+			})
+		case "rectorate":
+			crud.CreateRectorate(&crud.Rectorate{
 				ID:             user.ID,
 				OfficeLocation: u.OfficeLocation,
 			})
@@ -133,7 +143,7 @@ func importGraduationStatusesFromJSON(filePath string) error {
 			StudentID:          student.ID,
 			StudentSemester:    s.StudentSemester,
 			StudentGPA:         s.StudentGPA,
-			StudentCredits:     s.StudentCredits,
+			StudentECTS:        s.StudentECTS,
 			IsSystemConfirmed:  s.IsSystemConfirmed,
 			IsAdvisorConfirmed: s.IsAdvisorConfirmed,
 			IsDepSecConfirmed:  s.IsDepSecConfirmed,
@@ -163,6 +173,9 @@ func InitializeDefaultProfiles() {
 		})
 		crud.CreateRole(&crud.Role{
 			Name: "student_affairs",
+		})
+		crud.CreateRole(&crud.Role{
+			Name: "rectorate",
 		})
 	}
 
@@ -268,6 +281,7 @@ func InitializeDefaultProfiles() {
 		department_secretary_path := "../database/dbInitializer/defaultUsers/department_secretaries.json"
 		faculty_secretary_path := "../database/dbInitializer/defaultUsers/faculty_secretaries.json"
 		student_affairs_path := "../database/dbInitializer/defaultUsers/student_affairs.json"
+		rectorate_path := "../database/dbInitializer/defaultUsers/rectorates.json"
 		students_path := "../database/dbInitializer/defaultUsers/students.json"
 		graduation_status_path := "../database/dbInitializer/defaultUsers/graduation_statuses.json"
 		err := importUsersFromJSON(advisor_path)
@@ -286,6 +300,10 @@ func InitializeDefaultProfiles() {
 		if err != nil {
 			log.Printf("Error users from file %s: %v\n", student_affairs_path, err)
 		}
+		err = importUsersFromJSON(rectorate_path)
+		if err != nil {
+			log.Printf("Error users from file %s: %v\n", rectorate_path, err)
+		}
 		err = importUsersFromJSON(students_path)
 		if err != nil {
 			log.Printf("Error users from file %s: %v\n", students_path, err)
@@ -296,144 +314,5 @@ func InitializeDefaultProfiles() {
 			log.Printf("Error loading graduation statuses from file %s: %v\n", graduation_status_path, err)
 		}
 	}
-	/*
-		if len(crud.GetStudentAffairss()) == 0 {
-			// Default Student affairs
-			user := &crud.User{
-				Username:  "aynuryakar@iyte.edu.tr",
-				Email:     "aynuryakar@iyte.edu.tr",
-				Password:  util.HashPassword("1"),
-				Telephone: "0 (232) 750 6300",
-				Role:      "student_affairs",
-				FirstName: "Aynur",
-				LastName:  "YAKAR",
-			}
-			crud.CreateUser(user)
-			crud.CreateStudentAffairs(&crud.StudentAffairs{
-				ID:             user.ID,
-				OfficeLocation: "todo",
-			})
-		}
-
-		if len(crud.GetFacultySecretaries()) == 0 {
-			// Default faculty secretaries
-			user := &crud.User{
-				Username:  "facsec1",
-				Email:     "bilgisayarmuh@iyte.edu.tr",
-				Password:  "1",
-				Telephone: "todo",
-				Role:      "faculty_secretary",
-				FirstName: "Robert",
-				LastName:  "Johnson",
-			}
-			crud.CreateUser(user)
-			crud.CreateFacultySecretary(&crud.FacultySecretary{
-				ID:             user.ID,
-				FacultyName:    "Engineering",
-				OfficeLocation: "todo",
-			})
-		}
-
-		if len(crud.GetDepartmentSecretaries()) == 0 {
-			// Default department secretaries
-			user := &crud.User{
-				Username:  "depsec1",
-				Email:     "todo",
-				Password:  "1",
-				Telephone: "todo",
-				Role:      "department_secretary",
-				FirstName: "Bob",
-				LastName:  "Johnson",
-			}
-			crud.CreateUser(user)
-			crud.CreateDepartmentSecretary(&crud.DepartmentSecretary{
-				ID:             user.ID,
-				DepartmentName: "Computer Engineering",
-				OfficeLocation: "todo",
-			})
-		}
-
-		if len(crud.GetAdvisors()) == 0 {
-
-			// Default advisors
-			user := &crud.User{
-				Username:  "buketoksuzoglu@iyte.edu.tr",
-				Email:     "todo",
-				Password:  "4321",
-				Telephone: "+90 232 750 7864",
-				Role:      "advisor",
-				FirstName: "Buket",
-				LastName:  "Erşahin",
-			}
-
-			crud.CreateUser(user)
-			// Now use the auto-generated user.ID for the advisor
-			crud.CreateAdvisor(&crud.Advisor{
-				ID:             user.ID,
-				DepartmentName: "Computer Engineering",
-				OfficeLocation: "todo",
-			})
-
-			user = &crud.User{
-				Username:  "290201064",
-				Email:     "todo",
-				Password:  "samet123",
-				Telephone: "todo",
-				Role:      "student",
-				FirstName: "Samet",
-				LastName:  "Hodaman",
-			}
-			crud.CreateUser(user)
-			crud.CreateStudent(&crud.Student{
-				ID:        user.ID,
-				AdvisorID: crud.GetAdvisorByUsername("buketoksuzoglu@iyte.edu.tr").ID,
-			})
-
-			crud.CreateNotification(&crud.Notification{
-				UserID:             user.ID,
-				IsNotificationRead: false,
-				Title:              "Welcome to the system",
-				Message:            "Enjoy the system!	",
-			})
-
-			user = &crud.User{
-				Username:  "300201079",
-				Email:     "todo",
-				Password:  "1234",
-				Telephone: "todo",
-				Role:      "student",
-				FirstName: "Bahadir Efe",
-				LastName:  "AVSAR",
-			}
-			crud.CreateUser(user)
-			crud.CreateStudent(&crud.Student{
-				ID:        user.ID,
-				AdvisorID: crud.GetAdvisorByUsername("buketoksuzoglu@iyte.edu.tr").ID,
-			})
-		}
-		if len(crud.GetGraduationStatuses()) == 0 {
-			crud.CreateGraduationStatus(&crud.GraduationStatus{
-				Year:               2025,
-				StudentID:          crud.GetStudentByUsername("290201064").ID,
-				StudentSemester:    8,
-				StudentGPA:         2.5,
-				StudentCredits:     121,
-				IsAdvisorConfirmed: 2,
-				IsDepSecConfirmed:  2,
-				IsFacultyConfirmed: 2,
-				IsStdAffConfirmed:  2,
-			})
-			crud.CreateGraduationStatus(&crud.GraduationStatus{
-				Year:               2025,
-				StudentID:          crud.GetStudentByUsername("300201079").ID,
-				StudentSemester:    8,
-				StudentGPA:         2.6,
-				StudentCredits:     120,
-				IsAdvisorConfirmed: 2,
-				IsDepSecConfirmed:  2,
-				IsFacultyConfirmed: 2,
-				IsStdAffConfirmed:  2,
-			})
-		}*/
 
 }

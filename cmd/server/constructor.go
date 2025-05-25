@@ -2,7 +2,9 @@ package server
 
 import (
 	"graduation-system/endpoints/handlers/auth"
+	"graduation-system/endpoints/handlers/dashboard"
 	gradStatus "graduation-system/endpoints/handlers/graduationStatus"
+	"graduation-system/endpoints/handlers/graduationYear"
 	handlers "graduation-system/endpoints/handlers/notification"
 	"graduation-system/endpoints/handlers/student"
 	"graduation-system/endpoints/handlers/test"
@@ -30,6 +32,18 @@ func RunDBHttpServer(port string) {
 	router.POST("/graduation-status/update", wrapWithJWTMiddleware(gradStatus.UpdateGradStatus))
 
 	router.POST("/student/get/list/userid/:userid", wrapWithJWTMiddleware(student.GetStudentListDetailedByUserIDHandler))
+	router.POST("/student-detailed/get/id/:id", wrapWithJWTMiddleware(student.GetStudentDetailedByIDHandler))
+	router.POST("/student/graduation-request/apply", wrapWithJWTMiddleware(student.ApplyForGraduationHandler))
+	router.POST("/students/faculty/:faculty-name/top3", wrapWithJWTMiddleware(student.GetTop3StudentsOfFacultyHandler))
+	router.POST("/students/department/:department-name/top3", wrapWithJWTMiddleware(student.GetTop3OfStudentsOfDepartmentHandler))
+	router.POST("/students/all/top3", wrapWithJWTMiddleware(student.GetTop3OfStudentsOfAllHandler))
+	router.POST("/students/all/ranked", wrapWithJWTMiddleware(student.GetStudentsOfAllHandler))
+
+	router.POST("/dashboard/get/user-id/:user-id", wrapWithJWTMiddleware(dashboard.GetUserDashboardInfoHandler))
+
+	router.POST("/graduation-year/get", wrapWithJWTMiddleware(graduationYear.GetGraduationYearHandler))
+	router.POST("/graduation-year/create", wrapWithJWTMiddleware(graduationYear.CreateGraduationYearHandler))
+	router.POST("/graduation-year/update", wrapWithJWTMiddleware(graduationYear.UpdateGraduationYearHandler))
 
 	srv := &fasthttp.Server{
 		Handler: router.Handler,

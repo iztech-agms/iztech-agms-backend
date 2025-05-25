@@ -7,7 +7,8 @@
     "role": "student",
     "first_name": "Samet",
     "last_name": "Hodaman",
-    "advisor_username": "buketoksuzoglu@iyte.edu.tr"
+    "advisor_username": "buketoksuzoglu@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "300201079",
@@ -17,7 +18,8 @@
     "role": "student",
     "first_name": "Bahadır Efe",
     "last_name": "Avşar",
-    "advisor_username": "buketoksuzoglu@iyte.edu.tr"
+    "advisor_username": "isiloz@iyte.edu.tr",
+    "enrollment_year": 2022
   },
   {
     "username": "280201010",
@@ -27,7 +29,107 @@
     "role": "student",
     "first_name": "Eylül",
     "last_name": "Keskin",
-    "advisor_username": "cuneytbazlamacci@iyte.edu.tr"
+    "advisor_username": "cuneytbazlamacci@iyte.edu.tr",
+    "enrollment_year": 2020
+  },
+  {
+    "username": "294461361",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Ahmet",
+    "last_name": "Şahin",
+    "advisor_username": "serkanates@iyte.edu.tr",
+    "enrollment_year": 2020
+  },
+  {
+    "username": "294461384",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Can",
+    "last_name": "Kurt",
+    "advisor_username": "serkanates@iyte.edu.tr",
+    "enrollment_year": 2019
+  },
+  {
+    "username": "294461301",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Merve",
+    "last_name": "Özdemir",
+    "advisor_username": "serkanates@iyte.edu.tr",
+    "enrollment_year": 2019
+  },
+  {
+    "username": "290201071",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Elif",
+    "last_name": "Demirtaş",
+    "advisor_username": "buketoksuzoglu@iyte.edu.tr",
+    "enrollment_year": 2020
+  },
+  {
+    "username": "290201057",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Elif",
+    "last_name": "Koçak",
+    "advisor_username": "buketoksuzoglu@iyte.edu.tr",
+    "enrollment_year": 2020
+  },
+  {
+    "username": "290201032",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Ahmet",
+    "last_name": "Kurt",
+    "advisor_username": "buketoksuzoglu@iyte.edu.tr",
+    "enrollment_year": 2020
+  },
+  {
+    "username": "285831428",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Deniz",
+    "last_name": "Arslan",
+    "advisor_username": "tongucakis@iyte.edu.tr",
+    "enrollment_year": 2019
+  },
+  {
+    "username": "285831443",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Fatih",
+    "last_name": "Özdemir",
+    "advisor_username": "tongucakis@iyte.edu.tr",
+    "enrollment_year": 2019
+  },
+  {
+    "username": "285831413",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Emre",
+    "last_name": "Arslan",
+    "advisor_username": "tongucakis@iyte.edu.tr",
+    "enrollment_year": 2019
   },
   {
     "username": "290641149",
@@ -37,7 +139,8 @@
     "role": "student",
     "first_name": "Derya",
     "last_name": "Yıldız",
-    "advisor_username": "mustafaaltinkaya@iyte.edu.tr"
+    "advisor_username": "mustafaaltinkaya@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "277861066",
@@ -47,7 +150,8 @@
     "role": "student",
     "first_name": "Gizem",
     "last_name": "Karaca",
-    "advisor_username": "onurdemirors@iyte.edu.tr"
+    "advisor_username": "onurdemirors@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "287891070",
@@ -57,7 +161,8 @@
     "role": "student",
     "first_name": "Kerem",
     "last_name": "Bozkurt",
-    "advisor_username": "buketoksuzoglu@iyte.edu.tr"
+    "advisor_username": "buketoksuzoglu@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "285831403",
@@ -67,7 +172,8 @@
     "role": "student",
     "first_name": "Selin",
     "last_name": "Özkan",
-    "advisor_username": "tongucakis@iyte.edu.tr"
+    "advisor_username": "tongucakis@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "278601370",
@@ -77,7 +183,8 @@
     "role": "student",
     "first_name": "Pelin",
     "last_name": "Karaca",
-    "advisor_username": "lutfiozyuzer@iyte.edu.tr"
+    "advisor_username": "lutfiozyuzer@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "286451070",
@@ -87,7 +194,8 @@
     "role": "student",
     "first_name": "Tolga",
     "last_name": "Bozkurt",
-    "advisor_username": "neslierdogmus@iyte.edu.tr"
+    "advisor_username": "neslierdogmus@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "271021329",
@@ -97,7 +205,8 @@
     "role": "student",
     "first_name": "Berk",
     "last_name": "Aydın",
-    "advisor_username": "serkanates@iyte.edu.tr"
+    "advisor_username": "serkanates@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "270661417",
@@ -107,7 +216,8 @@
     "role": "student",
     "first_name": "Eda",
     "last_name": "Doğan",
-    "advisor_username": "tahsinbasaran@iyte.edu.tr"
+    "advisor_username": "tahsinbasaran@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "297921460",
@@ -117,7 +227,8 @@
     "role": "student",
     "first_name": "Ayşe",
     "last_name": "Güneş",
-    "advisor_username": "tongucakis@iyte.edu.tr"
+    "advisor_username": "tongucakis@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "274001064",
@@ -127,7 +238,8 @@
     "role": "student",
     "first_name": "Aslı",
     "last_name": "Tekin",
-    "advisor_username": "onurdemirors@iyte.edu.tr"
+    "advisor_username": "onurdemirors@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "288681459",
@@ -137,7 +249,8 @@
     "role": "student",
     "first_name": "Gizem",
     "last_name": "Kaya",
-    "advisor_username": "tongucakis@iyte.edu.tr"
+    "advisor_username": "tongucakis@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "274671347",
@@ -147,7 +260,8 @@
     "role": "student",
     "first_name": "Ali",
     "last_name": "Kaya",
-    "advisor_username": "serkanates@iyte.edu.tr"
+    "advisor_username": "serkanates@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "281391268",
@@ -157,7 +271,8 @@
     "role": "student",
     "first_name": "Zeynep",
     "last_name": "Öztürk",
-    "advisor_username": "ahmeteroglu@iyte.edu.tr"
+    "advisor_username": "ahmeteroglu@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "279151005",
@@ -167,7 +282,8 @@
     "role": "student",
     "first_name": "Mehmet",
     "last_name": "Doğan",
-    "advisor_username": "onurdemirors@iyte.edu.tr"
+    "advisor_username": "onurdemirors@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "274271203",
@@ -177,7 +293,8 @@
     "role": "student",
     "first_name": "Ayşe",
     "last_name": "Güneş",
-    "advisor_username": "hurriyetpolat@iyte.edu.tr"
+    "advisor_username": "hurriyetpolat@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "294461364",
@@ -187,7 +304,8 @@
     "role": "student",
     "first_name": "Ali",
     "last_name": "Kaya",
-    "advisor_username": "serkanates@iyte.edu.tr"
+    "advisor_username": "serkanates@iyte.edu.tr",
+    "enrollment_year": 2019
   },
   {
     "username": "298591246",
@@ -197,7 +315,8 @@
     "role": "student",
     "first_name": "Ali",
     "last_name": "Bozkurt",
-    "advisor_username": "hurriyetpolat@iyte.edu.tr"
+    "advisor_username": "hurriyetpolat@iyte.edu.tr",
+    "enrollment_year": 2020
   },
   {
     "username": "287081161",
@@ -207,6 +326,18 @@
     "role": "student",
     "first_name": "Selin",
     "last_name": "Avcı",
-    "advisor_username": "barisatakan@iyte.edu.tr"
+    "advisor_username": "barisatakan@iyte.edu.tr",
+    "enrollment_year": 2020
+  },
+  {
+    "username": "300201122",
+    "email": "todo",
+    "password": "1234",
+    "telephone": "todo",
+    "role": "student",
+    "first_name": "Gökmen Anıl",
+    "last_name": "Dağ",
+    "advisor_username": "isiloz@iyte.edu.tr",
+    "enrollment_year": 2022
   }
 ]

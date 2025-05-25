@@ -35,7 +35,13 @@ func UpdateGradStatus(ctx *fasthttp.RequestCtx) {
 			}
 			return
 		}
-
+		/*
+			if util.IsAfterEndDate() {
+				if err := json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "After End Date"}); err != nil {
+					log.Printf("Error encoding response at endpoint (%s): %v", path, err)
+				}
+			}
+		*/
 		if err := crud.UpdateGraduationStatus(gradStatus); err != nil {
 			log.Printf("Internal Server Error : %v", err)
 			if err = json.NewEncoder(ctx).Encode(response.ResponseMessage{Code: "3", Message: "Internal Server Error"}); err != nil {
@@ -50,6 +56,7 @@ func UpdateGradStatus(ctx *fasthttp.RequestCtx) {
 	}
 }
 
+/*
 func CreateGradStatus(ctx *fasthttp.RequestCtx) {
 	var path = string(ctx.Path())
 	select {
@@ -89,3 +96,4 @@ func CreateGradStatus(ctx *fasthttp.RequestCtx) {
 	}
 
 }
+*/

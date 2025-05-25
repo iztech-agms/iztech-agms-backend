@@ -625,3 +625,442 @@
 2025/05/24 20:21:56 DB HTTP Server is started listening on port : 8080
 2025/05/24 20:22:41 Log output is set to ../logs/server.log
 2025/05/24 20:23:47 DB HTTP Server is started listening on port : 8080
+2025/05/24 21:50:40 (Error) : error getting graduation_status : record not found
+2025/05/24 21:52:26 (Error) : error getting graduation_status : record not found
+2025/05/24 23:07:48 Log output is set to ../logs/server.log
+2025/05/24 23:07:53 DB HTTP Server is started listening on port : 8080
+2025/05/24 23:08:17 Log output is set to ../logs/server.log
+2025/05/24 23:08:23 DB HTTP Server is started listening on port : 8080
+2025/05/25 00:21:55 (Error) : error getting graduation_status : record not found
+2025/05/25 00:41:09 (Error) : error getting user : record not found
+2025/05/25 00:41:09 User not found at endpoint (/auth/login).
+2025/05/25 11:01:50 Log output is set to ../logs/server.log
+2025/05/25 11:01:56 DB HTTP Server is started listening on port : 8080
+2025/05/25 11:08:02 Log output is set to ../logs/server.log
+2025/05/25 11:08:08 DB HTTP Server is started listening on port : 8080
+2025/05/25 11:12:18 Log output is set to ../logs/server.log
+2025/05/25 11:12:27 DB HTTP Server is started listening on port : 8080
+2025/05/25 11:48:43 (Error) : error getting graduation_status : record not found
+2025/05/25 11:48:43 Student 3 not found
+2025/05/25 11:56:06 Student 5 not found
+2025/05/25 11:56:06 (Error) : error getting graduation_status : record not found
+2025/05/25 12:06:29 (Error) : error getting graduation_status : record not found
+2025/05/25 12:06:29 Student 15 not found
+2025/05/25 12:13:53 Log output is set to ../logs/server.log
+2025/05/25 12:14:00 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:14:03 (Error) : error getting student list detailed by user ids : Faculty: unsupported relations for schema StudentDetailed
+2025/05/25 12:14:21 (Error) : error getting student list detailed by user ids : Faculty: unsupported relations for schema StudentDetailed
+2025/05/25 12:14:33 Log output is set to ../logs/server.log
+2025/05/25 12:14:39 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:14:44 (Error) : error getting student list detailed by user ids : Faculty: unsupported relations for schema StudentDetailed
+2025/05/25 12:14:54 (Error) : error getting student list detailed by user ids : Faculty: unsupported relations for schema StudentDetailed
+2025/05/25 12:16:59 (Error) : error getting student list detailed by user ids : Faculty: unsupported relations for schema StudentDetailed
+2025/05/25 12:18:19 (Error) : error getting student list detailed by user ids : Faculty: unsupported relations for schema StudentDetailed
+2025/05/25 12:18:27 (Error) : error getting student list detailed by user ids : Faculty: unsupported relations for schema StudentDetailed
+2025/05/25 12:22:13 Log output is set to ../logs/server.log
+2025/05/25 12:22:18 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:22:22 (Error) : error getting student list detailed by user ids : Error 1054 (42S22): Unknown column 'students.department_name' in 'on clause'
+2025/05/25 12:22:22 Student 26 not found
+2025/05/25 12:22:32 (Error) : error getting student list detailed by user ids : Error 1054 (42S22): Unknown column 'students.department_name' in 'on clause'
+2025/05/25 12:22:32 Student 26 not found
+2025/05/25 12:23:36 Log output is set to ../logs/server.log
+2025/05/25 12:23:43 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:24:07 Log output is set to ../logs/server.log
+2025/05/25 12:24:14 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:25:02 Log output is set to ../logs/server.log
+2025/05/25 12:25:10 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:27:59 Log output is set to ../logs/server.log
+2025/05/25 12:28:05 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:40:23 Log output is set to ../logs/server.log
+2025/05/25 12:40:29 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:45:30 Log output is set to ../logs/server.log
+2025/05/25 12:45:36 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:49:28 Log output is set to ../logs/server.log
+2025/05/25 12:49:35 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:49:37 Log output is set to ../logs/server.log
+2025/05/25 12:49:43 DB HTTP Server is started listening on port : 8080
+2025/05/25 12:49:56 Error parsing JWT token at JWT Middleware: Token is expired
+2025/05/25 12:49:56 Error parsing JWT token at JWT Middleware: Token is expired
+2025/05/25 12:49:56 Error parsing JWT token at JWT Middleware: Token is expired
+2025/05/25 12:54:40 Log output is set to ../logs/server.log
+2025/05/25 12:54:46 DB HTTP Server is started listening on port : 8080
+2025/05/25 13:23:22 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:23:22 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:23:55 Log output is set to ../logs/server.log
+2025/05/25 13:24:03 DB HTTP Server is started listening on port : 8080
+2025/05/25 13:26:15 Student 2 not found
+2025/05/25 13:26:15 (Error) : error getting graduation_status : record not found
+2025/05/25 13:26:20 Student 2 not found
+2025/05/25 13:26:20 (Error) : error getting graduation_status : record not found
+2025/05/25 13:26:28 Student 2 not found
+2025/05/25 13:26:28 (Error) : error getting graduation_status : record not found
+2025/05/25 13:28:49 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:28:49 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:28:49 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:16 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:18 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:19 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:19 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:19 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:31 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:31 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:29:32 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:31:00 Error decoding request at endpoint (/graduation-status/update): unexpected end of JSON input
+2025/05/25 13:31:44 Log output is set to ../logs/server.log
+2025/05/25 13:31:50 DB HTTP Server is started listening on port : 8080
+2025/05/25 13:50:06 (Error) : error getting graduation_status : record not found
+2025/05/25 13:50:06 Student 2 not found
+2025/05/25 13:55:11 (Error) : error getting user : record not found
+2025/05/25 13:55:11 User not found at endpoint (/auth/login).
+2025/05/25 13:55:20 (Error) : error getting user : record not found
+2025/05/25 13:55:20 User not found at endpoint (/auth/login).
+2025/05/25 13:55:24 (Error) : error getting user : record not found
+2025/05/25 13:55:24 User not found at endpoint (/auth/login).
+2025/05/25 13:56:01 Log output is set to ../logs/server.log
+2025/05/25 13:56:08 DB HTTP Server is started listening on port : 8080
+2025/05/25 13:56:22 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:23 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:26 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:28 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:29 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:30 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:32 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:32 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:33 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:33 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:33 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:34 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:34 Invalid password at endpoint (/auth/login).
+2025/05/25 13:56:34 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:09 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:35 Log output is set to ../logs/server.log
+2025/05/25 13:57:41 DB HTTP Server is started listening on port : 8080
+2025/05/25 13:57:44 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:46 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:48 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:49 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:49 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:50 Invalid password at endpoint (/auth/login).
+2025/05/25 13:57:52 Invalid password at endpoint (/auth/login).
+2025/05/25 13:59:03 Invalid password at endpoint (/auth/login).
+2025/05/25 13:59:03 Invalid password at endpoint (/auth/login).
+2025/05/25 13:59:04 Invalid password at endpoint (/auth/login).
+2025/05/25 13:59:04 Invalid password at endpoint (/auth/login).
+2025/05/25 13:59:04 Invalid password at endpoint (/auth/login).
+2025/05/25 13:59:05 Invalid password at endpoint (/auth/login).
+2025/05/25 14:00:05 Log output is set to ../logs/server.log
+2025/05/25 14:00:13 Log output is set to ../logs/server.log
+2025/05/25 14:00:18 DB HTTP Server is started listening on port : 8080
+2025/05/25 14:00:21 Invalid password at endpoint (/auth/login).
+2025/05/25 14:00:24 Invalid password at endpoint (/auth/login).
+2025/05/25 14:00:25 Invalid password at endpoint (/auth/login).
+2025/05/25 14:00:31 Invalid password at endpoint (/auth/login).
+2025/05/25 14:00:33 Invalid password at endpoint (/auth/login).
+2025/05/25 14:00:34 Invalid password at endpoint (/auth/login).
+2025/05/25 14:00:43 Invalid password at endpoint (/auth/login).
+2025/05/25 14:01:04 Log output is set to ../logs/server.log
+2025/05/25 14:01:14 DB HTTP Server is started listening on port : 8080
+2025/05/25 14:01:18 Invalid password at endpoint (/auth/login).
+2025/05/25 14:01:19 Invalid password at endpoint (/auth/login).
+2025/05/25 14:01:21 Invalid password at endpoint (/auth/login).
+2025/05/25 14:02:36 Log output is set to ../logs/server.log
+2025/05/25 14:02:46 DB HTTP Server is started listening on port : 8080
+2025/05/25 14:02:51 Invalid password at endpoint (/auth/login).
+2025/05/25 14:02:53 Invalid password at endpoint (/auth/login).
+2025/05/25 14:03:11 Invalid password at endpoint (/auth/login).
+2025/05/25 14:03:51 Invalid password at endpoint (/auth/login).
+2025/05/25 14:03:52 Invalid password at endpoint (/auth/login).
+2025/05/25 14:04:02 Log output is set to ../logs/server.log
+2025/05/25 14:04:08 DB HTTP Server is started listening on port : 8080
+2025/05/25 14:04:18 Invalid password at endpoint (/auth/login).
+2025/05/25 14:04:30 Invalid password at endpoint (/auth/login).
+2025/05/25 14:04:37 Invalid password at endpoint (/auth/login).
+2025/05/25 14:05:24 Invalid password at endpoint (/auth/login).
+2025/05/25 14:21:57 Invalid password at endpoint (/auth/login).
+2025/05/25 14:53:23 Invalid password at endpoint (/auth/login).
+2025/05/25 15:20:16 Invalid password at endpoint (/auth/login).
+2025/05/25 15:23:19 (Error) : error getting user : record not found
+2025/05/25 15:23:19 User not found at endpoint (/auth/login).
+2025/05/25 15:26:05 (Error) : error getting user : record not found
+2025/05/25 15:26:05 User not found at endpoint (/auth/login).
+2025/05/25 15:26:06 (Error) : error getting user : record not found
+2025/05/25 15:26:06 User not found at endpoint (/auth/login).
+2025/05/25 15:53:46 (Error) : error getting user : record not found
+2025/05/25 15:53:46 User not found at endpoint (/auth/login).
+2025/05/25 16:04:27 (Error) : error getting user : record not found
+2025/05/25 16:04:27 User not found at endpoint (/auth/login).
+2025/05/25 16:04:32 (Error) : error getting user : record not found
+2025/05/25 16:04:32 User not found at endpoint (/auth/login).
+2025/05/25 16:35:27 Invalid password at endpoint (/auth/login).
+2025/05/25 16:46:19 (Error) : error getting user : record not found
+2025/05/25 16:46:19 User not found at endpoint (/auth/login).
+2025/05/25 16:47:06 (Error) : error getting user : record not found
+2025/05/25 16:47:06 User not found at endpoint (/auth/login).
+2025/05/25 16:47:07 (Error) : error getting user : record not found
+2025/05/25 16:47:07 User not found at endpoint (/auth/login).
+2025/05/25 16:47:07 (Error) : error getting user : record not found
+2025/05/25 16:47:07 User not found at endpoint (/auth/login).
+2025/05/25 16:47:08 (Error) : error getting user : record not found
+2025/05/25 16:47:08 User not found at endpoint (/auth/login).
+2025/05/25 16:49:28 (Error) : error getting user : record not found
+2025/05/25 16:49:28 User not found at endpoint (/auth/login).
+2025/05/25 16:50:07 (Error) : error getting user : record not found
+2025/05/25 16:50:07 User not found at endpoint (/auth/login).
+2025/05/25 16:50:08 (Error) : error getting user : record not found
+2025/05/25 16:50:08 User not found at endpoint (/auth/login).
+2025/05/25 16:53:02 Log output is set to ../logs/server.log
+2025/05/25 16:53:11 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:22:10 Log output is set to ../logs/server.log
+2025/05/25 17:22:17 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:22:24 Student 32 not found
+2025/05/25 17:22:24 (Error) : error getting graduation_status : record not found
+2025/05/25 17:24:22 (Error) : error getting graduation_year : record not found
+2025/05/25 17:24:58 (Error) : error getting graduation_year : record not found
+2025/05/25 17:25:08 (Error) : error getting graduation_year : record not found
+2025/05/25 17:28:50 (Error) : error getting graduation_year : record not found
+2025/05/25 17:30:22 (Error) : error getting graduation_year : record not found
+2025/05/25 17:31:22 Invalid password at endpoint (/auth/login).
+2025/05/25 17:31:25 (Error) : error getting graduation_year : record not found
+2025/05/25 17:31:44 Log output is set to ../logs/server.log
+2025/05/25 17:31:54 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:31:57 (Error) : error getting graduation_year : record not found
+2025/05/25 17:31:57 (Error) : error creating graduation_year : Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'end_date' at row 1
+2025/05/25 17:33:27 Log output is set to ../logs/server.log
+2025/05/25 17:33:34 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:33:36 (Error) : error getting graduation_year : record not found
+2025/05/25 17:33:41 (Error) : error getting graduation_year : record not found
+2025/05/25 17:33:41 (Error) : error creating graduation_year : Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'end_date' at row 1
+2025/05/25 17:34:29 Log output is set to ../logs/server.log
+2025/05/25 17:34:38 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:34:49 (Error) : error getting graduation_year : record not found
+2025/05/25 17:37:04 Log output is set to ../logs/server.log
+2025/05/25 17:37:12 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:37:47 (Error) : error getting graduation_year : record not found
+2025/05/25 17:37:52 (Error) : error getting graduation_year : record not found
+2025/05/25 17:39:37 Log output is set to ../logs/server.log
+2025/05/25 17:39:45 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:39:48 (Error) : error getting graduation_year : record not found
+2025/05/25 17:40:13 Log output is set to ../logs/server.log
+2025/05/25 17:40:21 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:40:22 (Error) : error getting graduation_year : record not found
+2025/05/25 17:40:25 (Error) : error getting graduation_year : record not found
+2025/05/25 17:42:49 Log output is set to ../logs/server.log
+2025/05/25 17:42:58 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:42:59 (Error) : error getting graduation_year : record not found
+2025/05/25 17:43:01 (Error) : error getting graduation_year : record not found
+2025/05/25 17:45:11 Log output is set to ../logs/server.log
+2025/05/25 17:45:21 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:45:31 (Error) : error getting graduation_year : record not found
+2025/05/25 17:57:42 Log output is set to ../logs/server.log
+2025/05/25 17:57:51 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:59:00 Log output is set to ../logs/server.log
+2025/05/25 17:59:08 DB HTTP Server is started listening on port : 8080
+2025/05/25 17:59:31 Invalid password at endpoint (/auth/login).
+2025/05/25 18:09:50 Log output is set to ../logs/server.log
+2025/05/25 18:09:56 DB HTTP Server is started listening on port : 8080
+2025/05/25 18:11:54 Invalid password at endpoint (/auth/login).
+2025/05/25 18:38:38 Invalid password at endpoint (/auth/login).
+2025/05/25 18:55:25 Invalid password at endpoint (/auth/login).
+2025/05/25 19:01:30 (Error) : error getting graduation_status : record not found
+2025/05/25 19:01:30 Student 32 not found
+2025/05/25 19:04:01 (Error) : error getting graduation_status : record not found
+2025/05/25 19:04:01 Student 32 not found
+2025/05/25 19:15:58 Log output is set to ../logs/server.log
+2025/05/25 19:16:05 DB HTTP Server is started listening on port : 8080
+2025/05/25 19:23:56 Log output is set to ../logs/server.log
+2025/05/25 19:24:05 DB HTTP Server is started listening on port : 8080
+2025/05/25 19:35:36 (Error) : error getting user : record not found
+2025/05/25 19:35:36 User not found at endpoint (/auth/login).
+2025/05/25 19:42:10 Log output is set to ../logs/server.log
+2025/05/25 19:42:17 DB HTTP Server is started listening on port : 8080
+2025/05/25 19:43:22 Log output is set to ../logs/server.log
+2025/05/25 19:43:31 DB HTTP Server is started listening on port : 8080
+2025/05/25 19:44:14 Log output is set to ../logs/server.log
+2025/05/25 19:44:35 DB HTTP Server is started listening on port : 8080
+2025/05/25 19:57:09 Log output is set to ../logs/server.log
+2025/05/25 19:57:17 DB HTTP Server is started listening on port : 8080
+2025/05/25 20:16:10 (Error) : error getting user : record not found
+2025/05/25 20:16:10 User not found at endpoint (/auth/login).
+2025/05/25 20:16:14 (Error) : error getting user : record not found
+2025/05/25 20:16:14 User not found at endpoint (/auth/login).
+2025/05/25 20:16:18 Log output is set to ../logs/server.log
+2025/05/25 20:16:26 DB HTTP Server is started listening on port : 8080
+2025/05/25 21:36:00 Log output is set to ../logs/server.log
+2025/05/25 21:36:10 DB HTTP Server is started listening on port : 8080
+2025/05/25 21:38:10 (Error) : no departments found for faculty name: science_faculty
+2025/05/25 21:38:18 (Error) : no departments found for faculty name: science_faculty
+2025/05/25 21:43:43 Log output is set to ../logs/server.log
+2025/05/25 21:43:56 DB HTTP Server is started listening on port : 8080
+2025/05/25 21:44:31 Department name: photonics
+2025/05/25 21:44:50 Department name: physics
+2025/05/25 21:44:50 (Error) : error getting students : sql: Scan error on column index 0, name "id": destination not a pointer; sql: Scan error on column index 0, name "id": destination not a pointer; sql: Scan error on column index 0, name "id": destination not a pointer; sql: Scan error on column index 0, name "id": destination not a pointer; sql: Scan error on column index 0, name "id": destination not a pointer; sql: Scan error on column index 0, name "id": destination not a pointer; sql: Scan error on column index 0, name "id": destination not a pointer
+2025/05/25 21:47:27 Log output is set to ../logs/server.log
+2025/05/25 21:47:36 DB HTTP Server is started listening on port : 8080
+2025/05/25 22:09:24 Department name: physics
+2025/05/25 22:09:29 Department name: chemistry
+2025/05/25 22:09:31 Department name: civil_engineering
+2025/05/25 22:09:40 Department name: food_engineering
+2025/05/25 22:09:51 Department name: mathematics
+2025/05/25 22:09:54 Department name: photonics
+2025/05/25 22:09:56 Department name: physics
+2025/05/25 22:10:00 Department name: molecular_biology
+2025/05/25 22:10:23 Department name: electrical_electronics_engineering
+2025/05/25 22:10:56 Department name: chemistry
+2025/05/25 22:11:01 Department name: architecture
+2025/05/25 22:11:08 Department name: computer_engineering
+2025/05/25 22:14:00 Log output is set to ../logs/server.log
+2025/05/25 22:14:08 DB HTTP Server is started listening on port : 8080
+2025/05/25 22:15:01 (Error) : no students found for faculty name: Engineering
+2025/05/25 22:16:08 Invalid password at endpoint (/auth/login).
+2025/05/25 22:17:39 Log output is set to ../logs/server.log
+2025/05/25 22:17:49 DB HTTP Server is started listening on port : 8080
+2025/05/25 22:17:53 Department name: photonics
+2025/05/25 22:17:53 (Error) : no students found for department name: photonics
+2025/05/25 22:18:21 Department name: physics
+2025/05/25 22:18:24 Department name: computer engineering
+2025/05/25 22:30:54 Student 12 not found
+2025/05/25 22:30:54 (Error) : error getting graduation_status : record not found
+2025/05/25 22:36:16 Log output is set to ../logs/server.log
+2025/05/25 22:36:25 DB HTTP Server is started listening on port : 8080
+2025/05/25 22:48:15 Department name: physics
+2025/05/25 22:48:19 Department name: computer engineering
+2025/05/25 22:49:24 Department name: computer engineering
+2025/05/25 22:49:56 Log output is set to ../logs/server.log
+2025/05/25 22:50:04 DB HTTP Server is started listening on port : 8080
+2025/05/25 22:51:14 (Error) : error getting graduation_status : record not found
+2025/05/25 22:51:14 Student 21 not found
+2025/05/25 22:51:37 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:51:37 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:51:38 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:51:40 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:51:41 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:51:42 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:51:43 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:52:06 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:52:09 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:52:12 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:52:19 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:52:41 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:53:04 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:53:14 Log output is set to ../logs/server.log
+2025/05/25 22:53:21 DB HTTP Server is started listening on port : 8080
+2025/05/25 22:53:27 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:53:36 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:53:45 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:53:50 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:54:11 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:56:16 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:56:16 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:21 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:22 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:45 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:45 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:48 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:49 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:53 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:53 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:55 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:55 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:57 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:57 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:58 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:57:58 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:58:01 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:58:01 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:58:07 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:58:08 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:58:10 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:58:18 Department name: photonics
+2025/05/25 22:58:18 (Error) : no students found for department name: photonics
+2025/05/25 22:58:40 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 22:59:05 Department name: physics
+2025/05/25 22:59:06 Department name: photonics
+2025/05/25 22:59:06 (Error) : no students found for department name: photonics
+2025/05/25 22:59:14 Department name: chemistry
+2025/05/25 22:59:16 Department name: physics
+2025/05/25 22:59:53 Log output is set to ../logs/server.log
+2025/05/25 23:00:04 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:00:05 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:00:26 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:00:31 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:01:14 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:01:24 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:01:42 Log output is set to ../logs/server.log
+2025/05/25 23:01:51 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:03:08 Log output is set to ../logs/server.log
+2025/05/25 23:03:19 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:04:30 Log output is set to ../logs/server.log
+2025/05/25 23:04:38 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:04:40 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:07:05 Log output is set to ../logs/server.log
+2025/05/25 23:07:12 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:07:13 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:08:05 (Error) : error getting user : record not found
+2025/05/25 23:08:05 User not found at endpoint (/auth/login).
+2025/05/25 23:08:13 Invalid password at endpoint (/auth/login).
+2025/05/25 23:08:28 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:08:46 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:08:46 Student 24 not found
+2025/05/25 23:08:46 (Error) : error getting graduation_status : record not found
+2025/05/25 23:08:55 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:08:55 Student 24 not found
+2025/05/25 23:08:55 (Error) : error getting graduation_status : record not found
+2025/05/25 23:09:04 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:09:29 Department name: physics
+2025/05/25 23:09:31 Department name: photonics
+2025/05/25 23:09:31 (Error) : no students found for department name: photonics
+2025/05/25 23:09:33 Department name: chemistry
+2025/05/25 23:09:35 Department name: mathematics
+2025/05/25 23:09:35 (Error) : no students found for department name: mathematics
+2025/05/25 23:09:36 Department name: molecular biology
+2025/05/25 23:09:36 (Error) : no students found for department name: molecular biology
+2025/05/25 23:09:52 Department name: mathematics
+2025/05/25 23:09:52 (Error) : no students found for department name: mathematics
+2025/05/25 23:09:53 Department name: chemistry
+2025/05/25 23:09:55 Department name: city planning
+2025/05/25 23:09:55 (Error) : no students found for department name: city planning
+2025/05/25 23:09:56 Department name: mechanical engineering
+2025/05/25 23:09:56 (Error) : no students found for department name: mechanical engineering
+2025/05/25 23:15:13 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:15:39 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:16:10 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:17:02 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:17:28 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:17:37 Department name: computer engineering
+2025/05/25 23:18:05 Log output is set to ../logs/server.log
+2025/05/25 23:18:14 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:18:15 Department name: chemistry
+2025/05/25 23:18:27 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:19:01 Log output is set to ../logs/server.log
+2025/05/25 23:19:09 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:19:46 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:20:29 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:21:24 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:22:10 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:22:21 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:22:25 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:22:30 Log output is set to ../logs/server.log
+2025/05/25 23:22:38 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:22:52 Error converting user ID to int at endpoint (/notifications/get/user-id/undefined): strconv.Atoi: parsing "undefined": invalid syntax
+2025/05/25 23:25:03 Log output is set to ../logs/server.log
+2025/05/25 23:25:13 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:25:44 Student 57 cannot graduate
+2025/05/25 23:26:54 Log output is set to ../logs/server.log
+2025/05/25 23:27:02 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:27:23 (Error) : error getting user : record not found
+2025/05/25 23:27:23 User not found at endpoint (/auth/login).
+2025/05/25 23:28:21 Invalid password at endpoint (/auth/login).
+2025/05/25 23:28:25 Student 57 cannot graduate
+2025/05/25 23:30:13 Log output is set to ../logs/server.log
+2025/05/25 23:30:22 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:30:25 Invalid password at endpoint (/auth/login).
+2025/05/25 23:34:18 Log output is set to ../logs/server.log
+2025/05/25 23:34:27 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:37:17 Log output is set to ../logs/server.log
+2025/05/25 23:37:25 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:47:00 Log output is set to ../logs/server.log
+2025/05/25 23:47:10 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:47:38 Log output is set to ../logs/server.log
+2025/05/25 23:47:48 DB HTTP Server is started listening on port : 8080
+2025/05/25 23:49:20 Log output is set to ../logs/server.log
+2025/05/25 23:49:27 DB HTTP Server is started listening on port : 8080

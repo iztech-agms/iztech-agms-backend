@@ -48,6 +48,14 @@ func CreateTables() {
 		log.Fatalf("(Error) : error creating tables : %v", err)
 	}
 
+	if err := globals.GMSDB.AutoMigrate(&crud.Rectorate{}); err != nil {
+		log.Fatalf("(Error) : error creating tables : %v", err)
+	}
+
+	if err := globals.GMSDB.AutoMigrate(&crud.GraduationYear{}); err != nil {
+		log.Fatalf("(Error) : error creating tables : %v", err)
+	}
+
 	if err := globals.GMSDB.AutoMigrate(&crud.Student{}); err != nil {
 		log.Fatalf("(Error) : error creating tables : %v", err)
 	}

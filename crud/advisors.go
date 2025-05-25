@@ -33,6 +33,14 @@ func GetAdvisorByID(id int) Advisor {
 	return advisor
 }
 
+// Get advisor by department name
+func GetAdvisorsByDepartmentName(departmentName string) []Advisor {
+	var advisors []Advisor
+	if err := globals.GMSDB.Where("department_name = ?", departmentName).Find(&advisors).Error; err != nil {
+		log.Printf("(Error) : error getting advisor : %v", err)
+	}
+	return advisors
+}
 
 // Get advisor by name (not tested yet)
 func GetAdvisorByUsername(username string) Advisor {

@@ -32,6 +32,15 @@ func GetDepartmentByName(name string) Department {
 	return department
 }
 
+// Get department by faculty name
+func GetDepartmentByFacultyName(facultyName string) []Department {
+	var departments []Department
+	if err := globals.GMSDB.Where("faculty_name = ?", facultyName).Find(&departments).Error; err != nil {
+		log.Printf("(Error) : error getting department : %v", err)
+	}
+	return departments
+}
+
 // Create department
 func CreateDepartment(department *Department) error {
 	if err := globals.GMSDB.Create(department).Error; err != nil {
